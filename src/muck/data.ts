@@ -1,0 +1,22 @@
+export const Navbar = [
+    {
+        id:1,
+        label:'about-us',
+        link:'about-us'
+    },
+    {
+        id:2,
+        label:'media',
+        link:'media'
+    },
+    {
+        id:3,
+        label:'reports',
+        link:'reports'
+    },
+    {
+        id:4,
+        label:'education',
+        link:'education'
+    },
+]
