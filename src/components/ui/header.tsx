@@ -3,6 +3,7 @@ import Image from "next/image";
 import logo from "@/public/Logo.svg";
 import { Navbar } from "@/muck/data";
 import Link from "next/link";
+import Lang from "./lang";
 export default function Header() {
   return (
     <>
@@ -27,7 +28,7 @@ export default function Header() {
             ))}
           </div>
 
-          <div>lang</div>
+         <Lang/>
         </Container>
       </header>
     </>

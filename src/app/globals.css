@@ -46,5 +46,17 @@ li {
 }
 
 button {
+  display: inline-block;
+  outline: none;
   cursor: pointer;
+}
+
+.ContainerLeft{
+  padding-left: 8px;
+  width:calc( (100% - (100% - 1192px) / 2)) ;
+  margin-left: calc((100% - 1192px) / 2);
+}
+
+input{
+  outline: none;
 }

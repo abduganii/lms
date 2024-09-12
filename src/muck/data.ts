@@ -1,3 +1,5 @@
+import { RuIcons } from "@/components/icon"
+
 export const Navbar = [
     {
         id:1,
@@ -19,4 +21,26 @@ export const Navbar = [
         label:'education',
         link:'education'
     },
+]
+
+export const LangArr = [
+    {
+        id:1,
+        label:'ru',
+        value:'ru',
+        icons: ()=> RuIcons(),
+    },
+    {
+        id:2,
+        label:'en',
+        value:'en',
+        icons: ()=> RuIcons(),
+    },
+    {
+        id:3,
+        label:'uz',
+        value:'uz',
+        icons: ()=> RuIcons(),
+    },
+   
 ]
