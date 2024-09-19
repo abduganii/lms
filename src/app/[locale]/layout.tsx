@@ -9,6 +9,7 @@ import initTranslations from "../i18n";
 import { ToastContainer } from 'react-toastify';
 import NextTopLoader from 'nextjs-toploader';
 import 'react-toastify/dist/ReactToastify.css';
+import Footer from "@/components/ui/footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -51,6 +52,7 @@ export default async function RootLayout({
       resources={resources}>
         <Header/>
         {children}
+        <Footer/>
     </TranslationsProvider>
       <ToastContainer/>
     </body>

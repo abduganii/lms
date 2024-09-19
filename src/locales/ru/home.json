@@ -1,3 +1,10 @@
 {
-    "lang":"Eng"
+    "lang":"Eng",
+    "contact": "Контакт",
+    "about-us": "О нас",
+    "news": "Новости",
+    "blogs": "Блоги",
+    "education": "Образование",
+    "resources": "Ресурсы",
+    "curs": "Курсы"
 }

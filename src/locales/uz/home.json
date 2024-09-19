@@ -1,3 +1,10 @@
 {
-    "lang":"Eng"
+    "lang":"Eng",
+    "contact": "Bog'lanish",
+    "about-us": "Biz haqimizda",
+    "news": "Yangiliklar",
+    "blogs": "Bloglar",
+    "education": "Ta'lim",
+    "resources": "Resurslar",
+    "curs": "Kurslar"
 }

@@ -1,3 +1,10 @@
 {
-    "lang":"Eng"
+    "lang":"Eng",
+    "contact": "Contact",
+    "about-us": "About us",
+    "news": "News",
+    "blogs": "Blogs",
+    "education": "Education",
+    "resources": "Resources",
+    "curs": "Courses"
 }

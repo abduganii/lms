@@ -4,23 +4,61 @@ export const Navbar = [
     {
         id:1,
         label:'about-us',
-        link:'about-us'
+        link:'/',
+        children: [
+            {
+                id:1,
+                label:'contact',
+                link:'/contact',
+            },
+            {
+                id:2,
+                label:'about-us',
+                link:'/about-us',
+            },
+        ]
     },
     {
         id:2,
-        label:'media',
-        link:'media'
+        label:'blogs',
+        link:'/',
+        children: [
+            {
+                id:1,
+                label:'news',
+                link:'/news',
+            },
+            {
+                id:2,
+                label:'blogs',
+                link:'/blogs',
+            },
+        ]
     },
     {
         id:3,
-        label:'reports',
-        link:'reports'
-    },
-    {
-        id:4,
         label:'education',
-        link:'education'
+        link:'/',
+        children: [
+            {
+                id:1,
+                label:'resources',
+                link:'/resources',
+            },
+            {
+                id:2,
+                label:'curs',
+                link:'/curs',
+            },
+            // {
+            //     id:3,
+            //     label:'graduates',
+            //     link:'/graduates',
+            // },
+            
+        ]
     },
+    
 ]
 
 export const LangArr = [
