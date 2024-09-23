@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function ContactSections() {
     return (
-            <Container  >
+            <Container className='mb-[120px]' >
                 <div className='flex items-center  bg-[#F4F6FB]  rounded-3xl overflow-hidden '>
 
                     <Image src={img1} width={564} height={523} alt="img"/>

@@ -3,7 +3,7 @@ import Container from "../ui/container";
 
 export default function SubscribeSections() {
     return (
-            <Container className='mb-[120px]'>
+            <Container className='my-[120px]'>
                 <div className=' bg-[#F4F6FB]  rounded-3xl overflow-hidden p-12'>
                 <h3 className="mb-8 text-2xl font-semibold leading-[29.05px]">Подпишитесь на нашу рассылку</h3>
                     <div className="flex items-center gap-8">

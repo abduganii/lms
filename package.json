@@ -10,15 +10,18 @@
   },
   "dependencies": {
     "@pbe/react-yandex-maps": "^1.2.5",
+    "chart.js": "^4.4.4",
     "i18next": "^23.15.1",
     "i18next-resources-to-backend": "^1.2.1",
     "next": "14.2.9",
     "next-i18n-router": "^5.5.1",
     "nextjs-toploader": "^3.6.15",
     "react": "^18",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "^18",
     "react-i18next": "^15.0.1",
-    "react-toastify": "^10.0.5"
+    "react-toastify": "^10.0.5",
+    "swiper": "^11.1.14"
   },
   "devDependencies": {
     "@types/node": "^20",
