@@ -2,12 +2,14 @@
 import Container from "@/components/ui/container";
 import Image from "next/image";
 import logo from "@/public/Logo.svg";
-import { Navbar } from "@/muck/data";
+import { HeaderNavBar, Navbar } from "@/muck/data";
 import Link from "next/link";
 import Lang from "./lang";
 import { useTranslation } from "react-i18next";
+import { useRouter } from "next/navigation";
 export default function Header() {
   const {t} = useTranslation()
+  const router = useRouter()
   return (
     <>
       <header className="w-full fixed  border-b border-gray-200  bg-white py-4  z-40">
@@ -20,13 +22,14 @@ export default function Header() {
           </Link>
 
           <div className="flex items-center gap-[24px] mr-auto">
-            {Navbar.map((e) => (
+            {HeaderNavBar.map((e) => (
               <div
                 className=" cursor-pointer group font-inter relative text-sm font-normal leading-6 text-left "
                 key={e?.id}
+                onClick={e?.link ? ()=> router.push(e?.link):()=>{}}
               >
                 {t(e?.label)}
-                <div
+               { e?.children ? <div
                   className="hidden absolute p-3 bg-white group-hover:inline-block left-0 top-5 rounded-md shadow">
                  {
                   e?.children?.map(el=>(
@@ -35,7 +38,7 @@ export default function Header() {
                  </Link>
                   ))
                  }
-                  </div>
+                  </div>:""}
               </div>
             ))}
           </div>

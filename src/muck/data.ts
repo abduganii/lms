@@ -1,5 +1,48 @@
 import { RuIcons } from "@/components/icon"
 
+export const HeaderNavBar = [
+    {
+        id:1,
+        label:'blogs',
+        link:'/blogs',
+    },
+    {
+        id:2,
+        label:'news',
+        link:'/news',
+    },
+    {
+        id:3,
+        label:'curs',
+        link:'/curs',
+    },
+    {
+        id:4,
+        label:'resources',
+        link:'/resources',
+    },
+    {
+        id:5,
+        label:'training-videos',
+        link:'/training-videos',
+    },
+    {
+        id:6,
+        label:'about-us',
+        children: [
+            {
+                id:1,
+                label:'contact',
+                link:'/contact',
+            },
+            {
+                id:2,
+                label:'about-us',
+                link:'/about-us',
+            },
+        ]
+    }
+]
 export const Navbar = [
     {
         id:1,
@@ -50,11 +93,11 @@ export const Navbar = [
                 label:'curs',
                 link:'/curs',
             },
-            // {
-            //     id:3,
-            //     label:'graduates',
-            //     link:'/graduates',
-            // },
+            {
+                id:3,
+                label:'training-videos',
+                link:'/training-videos',
+            },
             
         ]
     },

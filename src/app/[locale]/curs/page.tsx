@@ -1,10 +1,7 @@
-import CursPagePage from '@/components/page/curs'
-import React from 'react'
+import TrainingVideosPage from "@/components/page/training-videos";
 
 export default function Curs() {
   return (
-    <>
-    <CursPagePage/>
-    </>
+    <><TrainingVideosPage/></>
   )
 }

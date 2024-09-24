@@ -1,4 +1,5 @@
 import ArticlesSections from "../sections/articles";
+import BlogsSections from "../sections/blogs";
 import ContactSections from "../sections/contact";
 import CursSections from "../sections/curs";
 import EducationSections from "../sections/education";
@@ -22,6 +23,7 @@ export default function HomePage() {
     <SubscribeSections/>
     <ReviewSections/>
     <ContactSections/>
+    <BlogsSections/>
   </div>
   );
 }

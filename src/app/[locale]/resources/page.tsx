@@ -1,6 +1,6 @@
 import ResourcesPage from '@/components/page/resources'
 
-export default function resources() {
+export default function Resources() {
   return (
     <><ResourcesPage/></>
   )
