@@ -10,7 +10,7 @@ import ru from "@/public/lang/ru.png"
 import uz from "@/public/lang/uz.png"
 import en from "@/public/lang/en.png"
 
-const langFlag ={
+const langFlag:any = {
     ru:ru,
     uz:uz,
     en:en,
