@@ -1,4 +1,3 @@
-import { RuIcons } from "@/components/icon"
 
 export const HeaderNavBar = [
     {
@@ -109,19 +108,16 @@ export const LangArr = [
         id:1,
         label:'ru',
         value:'ru',
-        icons: ()=> RuIcons(),
     },
     {
         id:2,
         label:'en',
         value:'en',
-        icons: ()=> RuIcons(),
     },
     {
         id:3,
         label:'uz',
         value:'uz',
-        icons: ()=> RuIcons(),
     },
    
 ]

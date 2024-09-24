@@ -18,6 +18,6 @@ export default function EducationSections() {
                 </SwiperWithScrollIcons>
             </Container>  
         </div>
-        );
-  }
+    );
+}
   
