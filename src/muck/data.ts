@@ -22,11 +22,6 @@ export const HeaderNavBar = [
     },
     {
         id:5,
-        label:'training-videos',
-        link:'/training-videos',
-    },
-    {
-        id:6,
         label:'about-us',
         children: [
             {
@@ -92,11 +87,11 @@ export const Navbar = [
                 label:'curs',
                 link:'/curs',
             },
-            {
-                id:3,
-                label:'training-videos',
-                link:'/training-videos',
-            },
+            // {
+            //     id:3,
+            //     label:'training-videos',
+            //     link:'/training-videos',
+            // },
             
         ]
     },
