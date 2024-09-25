@@ -19,11 +19,11 @@ export default function HomePage() {
     <ArticlesSections/>
     <CursSections/>
     <NewsSections/>
-    <EducationSections/>
+    {/* <EducationSections/> */}
     <SubscribeSections/>
     <ReviewSections/>
     <ContactSections/>
-    <BlogsSections/>
+    {/* <BlogsSections/> */}
   </div>
   );
 }
