@@ -10,15 +10,22 @@ import PartnersSections from "../sections/partners";
 import ReviewSections from "../sections/review";
 import SubscribeSections from "../sections/subscribe";
 
-export default function HomePage() {
+interface HomePageinterface {
+  graduated: any[],
+  partners: any[],
+  courses:any[],
+  posts:any[],
+}
+
+export default function HomePage({graduated,partners,courses,posts}:HomePageinterface) {
   return (
   <div className="pt-[216px]">
     <HeroSections/>
-    <PartnersSections/>
-    <GraduatesSections/>
+    <PartnersSections partners={partners}/>
+    <GraduatesSections graduated={graduated}/>
     <ArticlesSections/>
-    <CursSections/>
-    <NewsSections/>
+    <CursSections courses={courses}/>
+    <NewsSections posts={posts}/>
     {/* <EducationSections/> */}
     <SubscribeSections/>
     <ReviewSections/>

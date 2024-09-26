@@ -60,3 +60,10 @@ button {
 input{
   outline: none;
 }
+
+.colm1{
+    width: calc((100% - 24px) / 2);
+}
+.colm2{
+  width: calc((100% - 48px) / 3);
+}

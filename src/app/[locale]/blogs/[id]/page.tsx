@@ -1,10 +1,20 @@
 import BlogsIdPage from '@/components/page/blogs-id'
 import React from 'react'
 
-export default function BlogsSinglePage() {
+async function getBlogs({id}:any) {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/blogs/${id}`);
+  console.log(res,"ds")
+  if (!res.ok) {
+    return console.log("errr");
+  }
+  return res.json();
+}
+export default async function BlogsSinglePage({ params: { id }}:any) {
+  const blogs = await getBlogs({id:id})
+  console.log(blogs)
   return (
     <>
-    <BlogsIdPage/>
+    <BlogsIdPage blogs={blogs}/>
     </>
   )
 }
