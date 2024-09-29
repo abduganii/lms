@@ -32,6 +32,7 @@ async function getPost({page}:Graduatesinterface) {
   if (!res.ok) {
     return console.log("errr");
   }
+  
   return res.json();
 }
 
