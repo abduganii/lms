@@ -39,7 +39,7 @@ export default function Lang() {
     };
     return (
       <>
-        <div className="relative cursor-pointer bg-neutral-50 flex items-center p-3 pr-2 border-r-3 rounded-xl gap-[2px] sm:gap-4"
+        <div className="relative ml-auto md:ml-0 cursor-pointer bg-neutral-50 flex items-center p-3 pr-2 border-r-3 rounded-xl gap-[2px] sm:gap-4"
         onClick={()=>setOpen(!open)}>
        
         <p className="font-normal text-base flex items-center">

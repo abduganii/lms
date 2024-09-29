@@ -16,7 +16,28 @@ export default  function SwiperWithScrollIcons({className, children,slidesPerVie
             modules={[ Autoplay]}
             spaceBetween={8}
             slidesPerView={slidesPerView}
-            // autoplay={{ delay: 2500, disableOnInteraction: false }}
+            breakpoints={{
+                640: {
+                  width: 640,
+                  slidesPerView: 1,
+                },
+                768: {
+                  width: 768,
+                  slidesPerView: slidesPerView - 1,
+                },
+                1024: {
+                    width: 768,
+                    slidesPerView: slidesPerView, 
+                },
+                1280: {
+                    width: 1280,
+                    slidesPerView: slidesPerView, 
+                },
+                1536: {
+                    width: 1536,
+                    slidesPerView: slidesPerView, 
+                }
+              }}
             className={`flex relative ${className && className}`}
             onSwiper={(e:any) => setSwiper(e)}
         >

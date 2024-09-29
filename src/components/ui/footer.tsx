@@ -11,9 +11,16 @@ import { useTranslation } from 'react-i18next'
 export default function Footer() {
   const {t} = useTranslation()
   return (
-    <footer className="py-[50px] bg-gray-100 ">
+    <footer className="py-[16px] md:py-[50px] bg-gray-100 ">
     <Container>
-        <div className="flex items-start gap-[30px] pb-6 flex-wrap sm:flex-nowrap pb-4 border-gray-300 border-b">
+        <div className="flex items-start gap-[30px] flex-wrap sm:flex-nowrap pb-4 border-gray-300 border-b">
+
+          <Link href={"/"} className="flex md:hidden items-center ml-[-15px] mb-[10px]">
+                <Image alt="img" height={39} width={62} src={logo} />
+                <h3 className="text-sm font-medium leading-5 text-left w-full max-w-[237px]">
+                  Министерство юстиции Республики Узбекистан
+                </h3>
+          </Link>
             {
                 Navbar?.map(e=>(
                     <div key={e?.id} className='w-full'>
@@ -35,11 +42,11 @@ export default function Footer() {
         </div>
         <div className='flex items-center justify-between pt-5'>
             <p className='text-sm font-normal leading-6 text-[#667085] '>© 2024. Все права защищены</p>
-            <Link href={"/"} className="flex items-center">
-            <Image alt="img" height={64} width={97} src={logo} />
-            <h3 className="text-sm font-medium leading-5 text-left w-full max-w-[237px]">
-              Министерство юстиции Республики Узбекистан
-            </h3>
+            <Link href={"/"} className="hidden md:flex items-center ">
+              <Image alt="img" height={64} width={97} src={logo} />
+              <h3 className="text-sm font-medium leading-5 text-left w-full max-w-[237px]">
+                Министерство юстиции Республики Узбекистан
+              </h3>
           </Link>
         </div>
     </Container>

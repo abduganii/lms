@@ -19,7 +19,7 @@ interface HomePageinterface {
 
 export default function HomePage({graduated,partners,courses,posts}:HomePageinterface) {
   return (
-  <div className="pt-[216px]">
+  <div className="pt-[120px] md:pt-[216px]">
     <HeroSections/>
     <PartnersSections partners={partners}/>
     <GraduatesSections graduated={graduated}/>

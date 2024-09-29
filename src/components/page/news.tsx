@@ -4,7 +4,7 @@ import NewsCard from '../card/news'
 
 export default function NewsPage({news}:any) {
   return (
-    <Container  className='py-[160px]' >
+    <Container  className='py-[120px] md:py-[160px]' >
     <h3 className="text-4xl font-semibold leading-[38.73px] text-left">Новости</h3>
     <div className="flex items-center flex-wrap gap-6 mt-8 ">
        {

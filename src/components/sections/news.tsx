@@ -14,7 +14,9 @@ export default function NewsSections({posts}:any) {
                             <NewsCard image={e?.image} key={e?.id}  navlink={`/news/${e?.slug}`} 
                              title={e?.title} date={e?.created_at}/>
                         ))
-                    }
+                }
+                
+                
                 </SwiperWithScrollIcons>
             </Container>  
         );

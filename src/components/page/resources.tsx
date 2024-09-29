@@ -4,22 +4,22 @@ import Container from "../ui/container";
 
 export default function ResourcesPage() {
   return (
-    <Container  className='py-[160px]' >
+    <Container  className='py-[120px] md:py-[160px]' >
     <h3 className="text-4xl font-semibold leading-[38.73px] text-left mb-4">Источники</h3>
-      <div className="flex gap-3 mb-8">
-        <div className="w-full cursor-pointer flex items-center justify-between max-w-[220px] bg-[#F5F5F5] py-3 px-5 rounded-md">
+      <div className="flex flex-wrap md:flex-nowrap gap-3 mb-8">
+        <div className="w-full cursor-pointer flex items-center justify-between sm:max-w-[220px] bg-[#F5F5F5] py-3 px-5 rounded-md">
           <p className="text-[14px] font-medium leading-[24px]">Все темы</p>
           <DownIcons/>
         </div>
-        <div className="w-full cursor-pointer flex items-center justify-between max-w-[220px] bg-[#F5F5F5] py-3 px-5 rounded-md">
+        <div className="w-full cursor-pointer flex items-center justify-between sm:max-w-[220px] bg-[#F5F5F5] py-3 px-5 rounded-md">
           <p className="text-[14px] font-medium leading-[24px]">Дата</p>
           <DownIcons/>
         </div>
-        <div className="w-full cursor-pointer flex items-center justify-between max-w-[220px] bg-[#F5F5F5] py-3 px-5 rounded-md">
+        <div className="w-full cursor-pointer flex items-center justify-between sm:max-w-[220px] bg-[#F5F5F5] py-3 px-5 rounded-md">
           <p className="text-[14px] font-medium leading-[24px]">По органу</p>
           <DownIcons/>
         </div>
-        <div className="w-full cursor-pointer flex items-center justify-between max-w-[220px] bg-[#F5F5F5] py-3 px-5 rounded-md">
+        <div className="w-full cursor-pointer flex items-center justify-between sm:max-w-[220px] bg-[#F5F5F5] py-3 px-5 rounded-md">
           <p className="text-[14px] font-medium leading-[24px]">По формам</p>
           <DownIcons/>
         </div>

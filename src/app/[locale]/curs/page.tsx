@@ -10,6 +10,6 @@ async function getCourses({page}:any) {
 export default async function Curs() {
   const curs = await getCourses({page:1})
   return (
-    <><TrainingVideosPage curs={curs}/></>
+    <><TrainingVideosPage curs={curs?.data}/></>
   )
 }

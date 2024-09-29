@@ -51,7 +51,7 @@ export default async function RootLayout({
       locale={locale}
       resources={resources}>
         <Header/>
-        {children}
+          {children}
         <Footer/>
     </TranslationsProvider>
       <ToastContainer/>

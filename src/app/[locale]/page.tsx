@@ -42,7 +42,7 @@ export default async function Home() {
   const posts = await getPost({page:1});
   return (
     <>
-      <HomePage partners={partners?.data} posts={posts?.data} graduated={graduated?.data} courses={courses}/>
+      <HomePage partners={partners?.data} posts={posts?.data} graduated={graduated?.data} courses={courses?.data}/>
     </>
   );
 }

@@ -6,10 +6,10 @@ import dayjs from "dayjs";
 
 export default function NewsIdPage({news}:any) {
   return (
-    <Container className="flex justify-end gap-6 pt-[160px] pb-[100px]">
-      <div className="w-full max-w-[760px]">
+    <Container className="flex justify-end flex-wrap md:flex-nowrap gap-6 pt-[120px] md:pt-[160px] pb-[100px]">
+      <div className="w-full md:max-w-[760px]">
         <Image
-          className="w-full object-cover h-[480px] rounded-xl aspect-[1.6/1] mb-12"
+          className="w-full object-cover rounded-xl aspect-[1.6/1] mb-12"
           alt="img"
           src={news?.image}
           width={760}
@@ -28,7 +28,7 @@ export default function NewsIdPage({news}:any) {
         </p>
       </div>
 
-      <div className="w-full max-w-[270px]">
+      <div className="w-full md:max-w-[270px]">
         <div className="pb-4 mb-4 border-b border-gray-200">
           <div className="group-hover:text-[#13399A] line-clamp-2 text-base font-semibold leading-6 text-left ">
             Министерство юстиции Республики Узбекистан ОБЪЯВЛЯЕТ Конкурс
