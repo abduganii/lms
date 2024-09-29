@@ -22,7 +22,6 @@ export default function GraduatesSections({graduated}:Graduatedinterface) {
 
                       ))
                   }
-                  
                 </SwiperWithScrollIcons>
             </Container>  
         );

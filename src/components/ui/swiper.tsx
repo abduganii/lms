@@ -15,7 +15,7 @@ export default  function SwiperWithScrollIcons({className, children,slidesPerVie
         <Swiper
             modules={[ Autoplay]}
             spaceBetween={8}
-            slidesPerView={slidesPerView}
+            slidesPerView={1}
             breakpoints={{
                 640: {
                   width: 640,
