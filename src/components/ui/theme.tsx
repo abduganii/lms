@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { EyeIcons } from "../icon";
 
-const useDarkMode = () => {
+const useDarkMode = ():any => {
   const [theme, setTheme] = useState(
     typeof window !== 'undefined' && localStorage.theme === 'dark' ? 'dark' : 'light'
   );
@@ -26,7 +26,7 @@ const Theme = () => {
   const [theme, toggleDarkMode] = useDarkMode();
   return (
     
-      <span className="cursor-pointer" onClick={toggleDarkMode}><EyeIcons color={theme=="dark"? "white": "black"} /></span>
+    <div className="cursor-pointer" onClick={toggleDarkMode}><EyeIcons color={theme == "dark" ? "white" : "black"} /></div>
   );
 };
 

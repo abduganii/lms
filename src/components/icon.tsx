@@ -300,7 +300,7 @@ export const XIcons =()=>{
     )
 }
 
-export const EyeIcons =({color})=>{
+export const EyeIcons =({color}:any)=>{
     return(
         <>
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill={color}  viewBox="0 0 16 16">
