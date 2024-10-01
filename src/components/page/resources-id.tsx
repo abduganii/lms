@@ -5,7 +5,7 @@ import { SocketIcons } from '../icon'
 export default function ResourcesById() {
   return (
     <Container className='py-[120px] md:py-[160px]'>
-        <div className="w-full cursor-pointer flex items-end  justify-between bg-[#F5F5F5] p-10 rounded-lg mb-12">
+        <div className="w-full cursor-pointer flex items-end  justify-between bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-10 rounded-lg mb-12">
          <div>
           <p className=" text-[24px] font-semibold leading-[29.05px] mb-3">Список международных меморандумов и соглашений Академии Генеральной прокуратуры Республики Узбекистан</p>
           <div className="flex items-center gap-2">

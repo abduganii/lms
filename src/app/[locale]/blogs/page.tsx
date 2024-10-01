@@ -8,7 +8,9 @@ async function getBlogs({page}:any) {
   return res.json();
 }
 export default async function Blogs() {
-  const blogs = await getBlogs({page:1})
+  const blogs = await getBlogs({ page: 1 })
+  
+  console.log(blogs)
   return (
     <>
     <BlogsPage blogs={blogs?.data}/>

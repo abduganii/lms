@@ -6,7 +6,7 @@ import dayjs from "dayjs"
 
 export default function CursCard({navlink='/',image,title,date,className}:any) {
     return (
-    <Link href={navlink} className={`group w-full p-3 inline-block rounded-xl bg-white ${className && className}`} >
+    <Link href={navlink} className={`group w-full p-3 inline-block rounded-xl bg-white dark:bg-[#00193B] ${className && className}`} >
         {image && <Image className="w-full h-[180px]  object-cover rounded-xl aspect-w-[1.37] aspect-h-[1] " alt="img"  src={image} width={246} height={180}/>}
 
         <h3 className="group-hover:text-[#13399A] whitespace-nowrap truncate text-base font-semibold leading-6 text-left mt-3 mb-10 hover:">

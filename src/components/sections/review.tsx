@@ -9,7 +9,7 @@ export default function ReviewSections() {
                 <h3 className="text-4xl font-semibold leading-[38.73px] text-left">Отзыв</h3>
             </div>
             <SwiperWithScrollIcons slidesPerView={3} className="flex gap-6">
-                <div className="w-full rounded-lg  bg-[#F1F1F1] p-6">
+                <div className="w-full rounded-lg  dark:bg-[#001E45] bg-[#F1F1F1] p-6">
                     <p className="text-base font-semibold leading-7 text-left mb-6">Раскройте сложности правосудия с помощью этого всеобъемлющего курса. Мы углубимся в фундаментальные принципы справедливости, равенства и верховенства закона, изучив, как эти концепции применяются в реальных...</p>
                     <div className="flex items-center gap-4">
                         <Image className="rounded-full" src={person} width={48} height={48} alt="img"/>
@@ -19,7 +19,7 @@ export default function ReviewSections() {
                         </div>
                     </div>
                 </div>
-                <div className="w-full rounded-lg  bg-[#F1F1F1] p-6">
+                <div className="w-full rounded-lg  bg-[#F1F1F1] dark:bg-[#001E45] p-6">
                     <p className="text-base font-semibold leading-7 text-left mb-6">Раскройте сложности правосудия с помощью этого всеобъемлющего курса. Мы углубимся в фундаментальные принципы справедливости, равенства и верховенства закона, изучив, как эти концепции применяются в реальных...</p>
                     <div className="flex items-center gap-4">
                         <Image className="rounded-full" src={person} width={48} height={48} alt="img"/>
@@ -29,7 +29,7 @@ export default function ReviewSections() {
                         </div>
                     </div>
                 </div>
-                <div className="w-full rounded-lg  bg-[#F1F1F1] p-6">
+                <div className="w-full rounded-lg  bg-[#F1F1F1] dark:bg-[#001E45] p-6">
                     <p className="text-base font-semibold leading-7 text-left mb-6">Раскройте сложности правосудия с помощью этого всеобъемлющего курса. Мы углубимся в фундаментальные принципы справедливости, равенства и верховенства закона, изучив, как эти концепции применяются в реальных...</p>
                     <div className="flex items-center gap-4">
                         <Image className="rounded-full" src={person} width={48} height={48} alt="img"/>
@@ -39,7 +39,7 @@ export default function ReviewSections() {
                         </div>
                     </div>
                 </div>
-                <div className="w-full rounded-lg  bg-[#F1F1F1] p-6">
+                <div className="w-full rounded-lg  bg-[#F1F1F1] dark:bg-[#001E45] p-6">
                     <p className="text-base font-semibold leading-7 text-left mb-6">Раскройте сложности правосудия с помощью этого всеобъемлющего курса. Мы углубимся в фундаментальные принципы справедливости, равенства и верховенства закона, изучив, как эти концепции применяются в реальных...</p>
                     <div className="flex items-center gap-4">
                         <Image className="rounded-full" src={person} width={48} height={48} alt="img"/>

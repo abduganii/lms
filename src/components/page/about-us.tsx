@@ -16,21 +16,21 @@ export default function AboutUsPage() {
         </div>  
         <Container className='my-[64px] md:my-[120px]'>
             <div className="flex flex-wrap md:flex-nowrap gap-6">
-                <div className="w-full bg-[#F5F5F5] p-6 rounded-md flex items-center gap-4">
+                <div className="w-full bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-6 rounded-md flex items-center gap-4">
                     <StudyIcons/>
                     <div>
                         <h4 className="text-[20px] font-semibold leading-[28px] ">25+</h4>
                         <p className=" text-[14px] font-normal leading-[24px] text-[#5B6871]">Курсы</p>
                     </div>
                 </div>
-                <div className="w-full bg-[#F5F5F5] p-6 rounded-md flex items-center gap-4">
+                <div className="w-full bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-6 rounded-md flex items-center gap-4">
                     <StudentIcons/>
                     <div>
                         <h4 className="text-[20px] font-semibold leading-[28px] ">25+</h4>
                         <p className=" text-[14px] font-normal leading-[24px] text-[#5B6871]">Курсы</p>
                     </div>
                 </div>
-                <div className="w-full bg-[#F5F5F5] p-6 rounded-md flex items-center gap-4">
+                <div className="w-full bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-6 rounded-md flex items-center gap-4">
                     <ClouckIcons/>
                     <div>
                         <h4 className="text-[20px] font-semibold leading-[28px] ">25+</h4>
@@ -40,21 +40,21 @@ export default function AboutUsPage() {
             </div>
             <h3 className="text-4xl font-semibold leading-[38.73px] text-left mt-[64px] md:mt-[120px]">Преимущества</h3>
             <div className="flex flex-wrap md:flex-nowrap gap-6 mt-8 ">
-                <div className="w-full bg-[#F5F5F5] p-6 rounded-md ">
+                <div className="w-full bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-6 rounded-md ">
                     <div className="w-[64px] h-[64px] bg-white"> </div>
                     <h4 className="mt-6 mb-1 text-[20px] font-semibold leading-[28px] ">Title</h4>
                     <p className="mb-4 text-[14px] font-normal leading-[24px] text-[#5B6871] list-decimal">Subtitle information</p>
                     <p className="mb-4 text-[14px] font-normal leading-[24px] text-[#5B6871] list-decimal">Subtitle information</p>
                     <p className="mb-4 text-[14px] font-normal leading-[24px] text-[#5B6871] list-decimal">Subtitle information</p>
                 </div>
-                <div className="w-full bg-[#F5F5F5] p-6 rounded-md ">
+                <div className="w-full bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-6 rounded-md ">
                     <div className="w-[64px] h-[64px] bg-white"> </div>
                     <h4 className="mt-6 mb-1 text-[20px] font-semibold leading-[28px] ">Title</h4>
                     <p className="mb-4 text-[14px] font-normal leading-[24px] text-[#5B6871] list-decimal">Subtitle information</p>
                     <p className="mb-4 text-[14px] font-normal leading-[24px] text-[#5B6871] list-decimal">Subtitle information</p>
                     <p className="mb-4 text-[14px] font-normal leading-[24px] text-[#5B6871] list-decimal">Subtitle information</p>
                 </div>
-                <div className="w-full bg-[#F5F5F5] p-6 rounded-md ">
+                <div className="w-full bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-6 rounded-md ">
                     <div className="w-[64px] h-[64px] bg-white"> </div>
                     <h4 className="mt-6 mb-1 text-[20px] font-semibold leading-[28px] ">Title</h4>
                     <p className="mb-4 text-[14px] font-normal leading-[24px] text-[#5B6871] list-decimal">Subtitle information</p>

@@ -39,7 +39,7 @@ export default function Lang() {
     };
     return (
       <>
-        <div className="relative ml-auto md:ml-0 cursor-pointer bg-neutral-50 flex items-center p-3 pr-2 border-r-3 rounded-xl gap-[2px] sm:gap-4"
+        <div className="relative ml-auto md:ml-0 cursor-pointer bg-neutral-50  dark:bg-[#001E45] flex items-center p-3 pr-2 border-r-3 rounded-xl gap-[2px] sm:gap-4"
         onClick={()=>setOpen(!open)}>
        
         <p className="font-normal text-base flex items-center">
@@ -54,7 +54,7 @@ export default function Lang() {
         </p>
        
     {
-        open ? <ul className='max-w-[108px] absolute top-12  bg-neutral-50 bg-white py-2 sm:py-3 rounded-xl w-full left-0"' onClick={handleChange}>
+        open ? <ul className='max-w-[108px] absolute top-12  bg-neutral-50 bg-white dark:bg-[#00132D] dark:text-[#FFFFFF] py-2 sm:py-3 rounded-xl w-full left-0"' onClick={handleChange}>
             {
                 LangArr.map(e=>(
                     <li className='flex font-normal text-base p-2   hover:bg-neutral-200' value={e?.value} key={e.id}>

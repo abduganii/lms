@@ -7,25 +7,25 @@ export default function ResourcesPage() {
     <Container  className='py-[120px] md:py-[160px]' >
     <h3 className="text-4xl font-semibold leading-[38.73px] text-left mb-4">Источники</h3>
       <div className="flex flex-wrap md:flex-nowrap gap-3 mb-8">
-        <div className="w-full cursor-pointer flex items-center justify-between sm:max-w-[220px] bg-[#F5F5F5] py-3 px-5 rounded-md">
+        <div className="w-full cursor-pointer flex items-center justify-between sm:max-w-[220px] bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] py-3 px-5 rounded-md">
           <p className="text-[14px] font-medium leading-[24px]">Все темы</p>
           <DownIcons/>
         </div>
-        <div className="w-full cursor-pointer flex items-center justify-between sm:max-w-[220px] bg-[#F5F5F5] py-3 px-5 rounded-md">
+        <div className="w-full cursor-pointer flex items-center justify-between sm:max-w-[220px] bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] py-3 px-5 rounded-md">
           <p className="text-[14px] font-medium leading-[24px]">Дата</p>
           <DownIcons/>
         </div>
-        <div className="w-full cursor-pointer flex items-center justify-between sm:max-w-[220px] bg-[#F5F5F5] py-3 px-5 rounded-md">
+        <div className="w-full cursor-pointer flex items-center justify-between sm:max-w-[220px] bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] py-3 px-5 rounded-md">
           <p className="text-[14px] font-medium leading-[24px]">По органу</p>
           <DownIcons/>
         </div>
-        <div className="w-full cursor-pointer flex items-center justify-between sm:max-w-[220px] bg-[#F5F5F5] py-3 px-5 rounded-md">
+        <div className="w-full cursor-pointer flex items-center justify-between sm:max-w-[220px] bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] py-3 px-5 rounded-md">
           <p className="text-[14px] font-medium leading-[24px]">По формам</p>
           <DownIcons/>
         </div>
       </div>
 
-      <Link href={'/resources/1'} className="w-full cursor-pointer flex items-center  justify-between bg-[#F5F5F5] p-4 rounded-lg mb-4">
+      <Link href={'/resources/1'} className="w-full cursor-pointer flex items-center  justify-between bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-4 rounded-lg mb-4">
          <div>
           <p className="text-[16px] font-medium leading-[26px] mb-3">Список международных меморандумов и соглашений Академии Генеральной прокуратуры Республики Узбекистан</p>
           <div className="flex items-center gap-2">
@@ -36,7 +36,7 @@ export default function ResourcesPage() {
          <RightIcons2/> 
       </Link>
      
-      <Link href={'/resources/1'} className="w-full cursor-pointer flex items-center  justify-between bg-[#F5F5F5] p-4 rounded-lg mb-4">
+      <Link href={'/resources/1'} className="w-full cursor-pointer flex items-center  justify-between bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-4 rounded-lg mb-4">
          <div>
           <p className="text-[16px] font-medium leading-[26px] mb-3">Список международных меморандумов и соглашений Академии Генеральной прокуратуры Республики Узбекистан</p>
           <div className="flex items-center gap-2">
@@ -46,7 +46,7 @@ export default function ResourcesPage() {
          </div>
          <RightIcons2/> 
       </Link>
-      <Link href={'/resources/1'} className="w-full cursor-pointer flex items-center  justify-between bg-[#F5F5F5] p-4 rounded-lg mb-4">
+      <Link href={'/resources/1'} className="w-full cursor-pointer flex items-center  justify-between bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-4 rounded-lg mb-4">
          <div>
           <p className="text-[16px] font-medium leading-[26px] mb-3">Список международных меморандумов и соглашений Академии Генеральной прокуратуры Республики Узбекистан</p>
           <div className="flex items-center gap-2">
@@ -56,7 +56,7 @@ export default function ResourcesPage() {
          </div>
          <RightIcons2/> 
       </Link>
-      <Link href={'/resources/1'} className="w-full cursor-pointer flex items-center  justify-between bg-[#F5F5F5] p-4 rounded-lg mb-4">
+      <Link href={'/resources/1'} className="w-full cursor-pointer flex items-center  justify-between bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-4 rounded-lg mb-4">
          <div>
           <p className="text-[16px] font-medium leading-[26px] mb-3">Список международных меморандумов и соглашений Академии Генеральной прокуратуры Республики Узбекистан</p>
           <div className="flex items-center gap-2">

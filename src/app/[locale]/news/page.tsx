@@ -1,7 +1,7 @@
 import NewsPage from "@/components/page/news";
 
 async function getNews({page}:any) {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/posts?page=${page}`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/posts`);
   if (!res.ok) {
     return console.log("errr");
   }

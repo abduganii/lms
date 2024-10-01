@@ -11,7 +11,7 @@ async function getBlogs({id}:any) {
 }
 export default async function BlogsSinglePage({ params: { id }}:any) {
   const blogs = await getBlogs({id:id})
-  console.log(blogs)
+
   return (
     <>
     <BlogsIdPage blogs={blogs}/>

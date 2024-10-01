@@ -11,7 +11,7 @@ import { useTranslation } from 'react-i18next'
 export default function Footer() {
   const {t} = useTranslation()
   return (
-    <footer className="py-[16px] md:py-[50px] bg-gray-100 ">
+    <footer className="py-[16px] md:py-[50px] bg-gray-100 dark:bg-[#001E45] dark:text-[#FFFFFF]">
     <Container>
         <div className="flex items-start gap-[30px] flex-wrap sm:flex-nowrap pb-4 border-gray-300 border-b">
 

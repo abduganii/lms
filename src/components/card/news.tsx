@@ -1,11 +1,10 @@
 import Image from "next/image";
-import img1 from '@/public/Frame270989841.png'
 import Link from "next/link";
 import dayjs from "dayjs";
 export default function NewsCard({navlink='/', image,title,date,className}:any) {
     return (
     <Link href={navlink} className={`group w-full ${className && className}`} >
-        {image && <Image className="w-full object-cover h-[180px] rounded-xl aspect-w-[1.37] aspect-h-[1] " alt="img"  src={image} width={246} height={180}/>}
+        {image && <Image className="w-full object-cover aspect-[1.6/1] rounded-xl aspect-w-[1.37] aspect-h-[1] " alt="img"  src={image} width={246} height={180}/>}
 
         <div className="group-hover:text-[#13399A]  whitespace-nowrap truncate text-base font-semibold leading-6 text-left mt-3 mb-1">
             {title}

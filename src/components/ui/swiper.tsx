@@ -7,37 +7,28 @@ import 'swiper/css';
 import 'swiper/css/autoplay'
 import React, { useState } from 'react';
 import { SwiperLeftIcons, SwiperRightIcons } from '../icon';
+import useWindowSize from '@/hook/useWindowwWidth';
 
-export default  function SwiperWithScrollIcons({className, children,slidesPerView}:any) {
-    const [swipers,setSwiper] = useState<any>()
+export default  function SwiperWithScrollIcons({className, children,slidesPerView,slidesPerViewRes}:any) {
+    const [swipers, setSwiper] = useState<any>()
+    const { width } = useWindowSize();
     return  (
     <>
         <Swiper
             modules={[ Autoplay]}
             spaceBetween={8}
-            slidesPerView={1}
-            breakpoints={{
-                640: {
-                  width: 640,
-                  slidesPerView: 1,
-                },
-                768: {
-                  width: 768,
-                  slidesPerView: slidesPerView - 1,
-                },
-                1024: {
-                    width: 768,
-                    slidesPerView: slidesPerView, 
-                },
-                1280: {
-                    width: 1280,
-                    slidesPerView: slidesPerView, 
-                },
-                1536: {
-                    width: 1536,
-                    slidesPerView: slidesPerView, 
-                }
-              }}
+            slidesPerView={width > 900 ?  slidesPerView : width > 500 ? slidesPerView - 1:slidesPerViewRes|| 1 }
+            // breakpoints={{
+            //     640: {
+            //       width: 640,
+            //       slidesPerView: 1,
+            //     },
+            //     768: {
+            //       width: 768,
+            //       slidesPerView: slidesPerView - 1,
+            //     },
+            //     }
+            //   }}
             className={`flex relative ${className && className}`}
             onSwiper={(e:any) => setSwiper(e)}
         >

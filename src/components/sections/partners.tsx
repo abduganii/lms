@@ -1,12 +1,13 @@
 import Container from "@/components/ui/container";
 import Image from "next/image";
-import img1 from '@/public/partnor.png'
+import SwiperWithScrollIcons from "../ui/swiper";
 
-export default function PartnersSections({partners}:any) {
+export default function PartnersSections({ partners }: any) {
     return (
         <Container className='mb-[120px]' >
             <h3 className="text-2xl font-semibold leading-[29.05px] text-center">Партнеры</h3>
-            <div className="flex flex-wrap justify-center lg:flex-nowrap items-center gap-6 mt-6 ">
+                
+            <SwiperWithScrollIcons slidesPerView={6} slidesPerViewRes={2} className="flex items-center gap-6 mt-6 ">
                 {
                     partners?.length && partners?.map((e:any)=>(
                         <Image
@@ -19,7 +20,7 @@ export default function PartnersSections({partners}:any) {
                         />
                     ))
                 }
-            </div>
+            </SwiperWithScrollIcons>
         </Container>  
     );
   }
