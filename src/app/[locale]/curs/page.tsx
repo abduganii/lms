@@ -1,7 +1,7 @@
 import TrainingVideosPage from "@/components/page/training-videos";
 
 async function getCourses({page}:any) {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/courses?page=${page}`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/courses`);
   if (!res.ok) {
     return console.log("errr");
   }
