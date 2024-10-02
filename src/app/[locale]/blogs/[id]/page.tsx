@@ -3,7 +3,6 @@ import React from 'react'
 
 async function getBlogs({id}:any) {
   const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/blogs/${id}`);
-  console.log(res,"ds")
   if (!res.ok) {
     return console.log("errr");
   }

@@ -9,7 +9,7 @@ export default function TrainingVideosPage({curs}:any) {
     <div className="flex  flex-wrap gap-6 mt-8 ">
     {
       curs?.length && curs?.map((e:any)=>(
-          <CursCard className='colm2' image={e?.img} key={e?.id} navlink={`/curs/${e?.id}`} title={e?.name} date={e?.created_at}/>
+          <CursCard className='colm2' image={e?.img} key={e?.id} navlink={`/curs/${e?.id}`} title={e?.name} end_date={e?.end_date} start_date={e?.start_date}/>
       ))
   }
                    

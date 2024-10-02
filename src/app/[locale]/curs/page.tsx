@@ -8,7 +8,7 @@ async function getCourses({page}:any) {
   return res.json();
 }
 export default async function Curs() {
-  const curs = await getCourses({page:1})
+  const curs = await getCourses({ page: 1 })
   return (
     <><TrainingVideosPage curs={curs?.data}/></>
   )

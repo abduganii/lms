@@ -13,7 +13,7 @@ export default function CursSections({courses}:any) {
                 <SwiperWithScrollIcons slidesPerView={4} className="flex  gap-6 mt-8 ">
                     {
                         courses?.length && courses?.map((e:any)=>(
-                            <CursCard image={e?.img} key={e?.id} navlink={`/curs/${e?.id}`} title={e?.name} date={e?.created_at}/>
+                            <CursCard image={e?.img} key={e?.id} navlink={`/curs/${e?.id}`} title={e?.name} date={e?.created_at} end_date={e?.end_date} start_date={e?.start_date}/>
                         ))
                     }
                    

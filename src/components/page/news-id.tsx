@@ -3,8 +3,10 @@ import Container from "../ui/container";
 import Image from "next/image";
 import img1 from "@/public/Frame270989841.png";
 import dayjs from "dayjs";
+import Link from "next/link";
 
-export default function NewsIdPage({news}:any) {
+export default function NewsIdPage({ news }: any) {
+  
   return (
     <Container className="flex justify-end flex-wrap md:flex-nowrap gap-6 pt-[120px] md:pt-[160px] pb-[100px]">
       <div className="w-full md:max-w-[760px]">
@@ -26,6 +28,7 @@ export default function NewsIdPage({news}:any) {
         <p className="text-[#48535B]  text-base font-normal leading-[26px]">
         {news?.description}
         </p>
+        <Link className='inline-block decoration-1 text-blue-400' href={news?.og_url}>{news?.og_url}</Link>
       </div>
 
       <div className="w-full md:max-w-[270px]">
