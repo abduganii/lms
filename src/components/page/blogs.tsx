@@ -18,28 +18,40 @@ interface Category {
 }
 
 interface BlogsPageProps {
-  blogs: Blog[];
+  blogs: any;
   categories: Category[];
 }
 
 export default function BlogsPage({ blogs: initialBlogs, categories }: BlogsPageProps) {
-  const [blogs, setBlogs] = useState<Blog[]>(initialBlogs); 
+  const [blogs, setBlogs] = useState<Blog[]>(initialBlogs?.data||[]); 
   const [value, setValue] = useState<Category | null>(null);
-
-  async function getBlogsByCategory(categoryId: number | null) {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/blogs?category_id=${categoryId}`);
+  const [page,setPage ] = useState(1)
+  async function getBlogsByCategory(param: any) {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/blogs?category_id=${param.categoryId}`);
     if (res.ok) {
       const data = await res.json();
-      setBlogs(data?.data || []); 
+      setBlogs(data?.data|| []); 
+    } else {
+      console.error('Failed to fetch blogs');
+    }
+  }
+    async function getBlogsByPage(param: any) {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/blogs?page=${param.page}${param.categoryId?`&category_id=${param.categoryId}`:""}`);
+    if (res.ok) {
+      const data = await res.json();
+      setBlogs([...blogs,...data?.data] || []); 
     } else {
       console.error('Failed to fetch blogs');
     }
   }
 
   useEffect(() => {
-    getBlogsByCategory(value ? value.id : null);
+      getBlogsByCategory({categoryId:value?value.id :null,page: page||1} );
   }, [value]);
 
+  useEffect(() => {
+    getBlogsByPage({categoryId:value?value.id :null,page: page||1} );
+}, [page]);
   return (
     <Container className='py-[120px] md:py-[160px]'>
       <h3 className="text-4xl font-semibold leading-[38.73px] text-left">Blogs</h3>
@@ -62,6 +74,9 @@ export default function BlogsPage({ blogs: initialBlogs, categories }: BlogsPage
           />
         )) : <p>No blogs available</p>}
       </div>
+      { page < initialBlogs?.last_page? <div onClick={()=>setPage(state=>state +1)} className='w-full px-4 py-3 text-white text-center rounded mt-9 cursor-pointer bg-[#13399A]'>
+      load more
+      </div>:""}
     </Container>
   );
 }

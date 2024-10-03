@@ -21,7 +21,7 @@ export default async function Blogs() {
   
   return (
     <>
-      <BlogsPage blogs={blogs?.data} categories={categories} />
+      <BlogsPage blogs={blogs} categories={categories} />
     </>
   )
 }
