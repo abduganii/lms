@@ -15,12 +15,12 @@ start_date,className}:any) {
         </h3>
             <p className="text-sm font-normal leading-6 text-left flex items-center gap-1" > <DateIcons />
                 <span>start date </span>
-                {start_date.slice(0, 16)}
+                {start_date?.slice(0, 16)}
             </p>
             
             <p className="text-sm font-normal leading-6 text-left flex items-center gap-1" > <DateIcons />
             <span>end date </span>
-                {end_date.slice(0, 16)}
+                {end_date?.slice(0, 16)}
             </p>    
     </Link>
     );

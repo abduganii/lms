@@ -39,7 +39,7 @@ export default function BlogsPage({ blogs: initialBlogs, categories }: BlogsPage
     const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/blogs?page=${param.page}${param.categoryId?`&category_id=${param.categoryId}`:""}`);
     if (res.ok) {
       const data = await res.json();
-      setBlogs([...blogs,...data?.data] || []); 
+      setBlogs(state=>[...state,...data?.data])
     } else {
       console.error('Failed to fetch blogs');
     }

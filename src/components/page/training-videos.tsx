@@ -3,9 +3,9 @@ import React, { useEffect, useState } from 'react'
 import Container from '../ui/container'
 import CursCard from '../card/curs'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-
+import _ from 'lodash'
 export default function TrainingVideosPage({curs}:any) {
-  const [cursArr,setcursArr] = useState([])
+  const [cursArr,setcursArr] = useState<any>([])
   const searchParams = useSearchParams();
   const { replace } = useRouter();
   const pathname = usePathname();
@@ -19,8 +19,10 @@ export default function TrainingVideosPage({curs}:any) {
   };
 
   useEffect(()=>{
-    setcursArr(cursArr.length ?[ ...cursArr ,...curs?.data,]:curs?.data)
+    setcursArr((state:any)=>_.uniq([...state,...curs?.data]))
   },[curs])
+
+  console.log(cursArr)
   return (
     <Container  className='py-[120px] md:py-[160px]' >
     <h3 className="text-4xl font-semibold leading-[38.73px] text-left">Курсы</h3>

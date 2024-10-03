@@ -3,9 +3,10 @@ import React, { useEffect, useState } from 'react'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import Container from '../ui/container'
 import NewsCard from '../card/news'
+import _ from 'lodash'
 
 export default function NewsPage({news}:any) {
-  const [newsArr,setNewsArr] = useState([])
+  const [newsArr,setNewsArr] = useState<any>([])
   const searchParams = useSearchParams();
   const { replace } = useRouter();
   const pathname = usePathname();
@@ -19,7 +20,7 @@ export default function NewsPage({news}:any) {
   };
 
   useEffect(()=>{
-    setNewsArr(newsArr.length ?[ ...newsArr ,...news?.data,]:news?.data)
+    setNewsArr((state:any)=>_.sortedUniq([...state,...news?.data]))
   },[news])
   return (
     <Container  className='py-[120px] md:py-[160px]' >
