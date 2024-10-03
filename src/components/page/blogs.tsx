@@ -39,7 +39,7 @@ export default function BlogsPage({ blogs: initialBlogs, categories }: BlogsPage
     const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/blogs?page=${param.page}${param.categoryId?`&category_id=${param.categoryId}`:""}`);
     if (res.ok) {
       const data = await res.json();
-      setBlogs(state=>[...state,...data?.data])
+      setBlogs(data?.data)
     } else {
       console.error('Failed to fetch blogs');
     }
@@ -74,8 +74,22 @@ export default function BlogsPage({ blogs: initialBlogs, categories }: BlogsPage
           />
         )) : <p>No blogs available</p>}
       </div>
-      { page < initialBlogs?.last_page? <div onClick={()=>setPage(state=>state +1)} className='w-full px-4 py-3 text-white text-center rounded mt-9 cursor-pointer bg-[#13399A]'>
-      load more
+    
+
+      { initialBlogs?.last_page > 1 ?  <div className="flex justify-center space-x-2 mt-6">
+        {Array.from({ length: initialBlogs?.last_page }, (_, index) => index + 1).map((p) => (
+          <button
+            key={p}
+            onClick={() => setPage(p)}
+            className={`px-4 py-2 rounded-lg border ${
+              p === initialBlogs?.current_page
+                ? "bg-blue-500 text-white border-blue-500"
+                : "bg-white text-blue-500 border-gray-300"
+            } hover:bg-blue-100`}
+          >
+            {p}
+          </button>
+        ))}
       </div>:""}
     </Container>
   );

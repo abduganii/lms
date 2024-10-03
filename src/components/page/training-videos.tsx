@@ -11,15 +11,15 @@ export default function TrainingVideosPage({curs}:any) {
   const pathname = usePathname();
   const params = new URLSearchParams(searchParams);
   const page: any = params.get('page')? Number(params.get('page')) : 1
-  const handlePage  = () => {
-    if(page < curs?.last_page){
-      params.set('page', page + 1 );
+  const handlePage  = (p:any) => {
+    if(p <= curs?.last_page){
+      params.set('page', p  );
       replace(`${pathname}?${params.toString()}`);
     }
   };
 
   useEffect(()=>{
-    setcursArr((state:any)=>_.uniq([...state,...curs?.data]))
+    setcursArr(curs?.data)
   },[curs])
 
   console.log(cursArr)
@@ -34,8 +34,22 @@ export default function TrainingVideosPage({curs}:any) {
   }
                    
     </div>
-    { page < curs?.last_page? <div onClick={handlePage} className='w-full px-4 py-3 text-white text-center rounded mt-9 cursor-pointer bg-[#13399A]'>
-      load more
+   
+
+      {curs?.last_page > 1 ?  <div className="flex justify-center space-x-2 mt-6">
+        {Array.from({ length: curs?.last_page }, (_, index) => index + 1).map((p) => (
+          <button
+            key={p}
+            onClick={() => handlePage(Number(p))}
+            className={`px-4 py-2 rounded-lg border ${
+              p === curs?.current_page
+                ? "bg-blue-500 text-white border-blue-500"
+                : "bg-white text-blue-500 border-gray-300"
+            } hover:bg-blue-100`}
+          >
+            {p}
+          </button>
+        ))}
       </div>:""}
 </Container>
   )

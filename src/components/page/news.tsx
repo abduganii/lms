@@ -12,15 +12,15 @@ export default function NewsPage({news}:any) {
   const pathname = usePathname();
   const params = new URLSearchParams(searchParams);
   const page: any = params.get('page')? Number(params.get('page')) : 1
-  const handlePage  = () => {
-    if(page < news?.last_page){
-      params.set('page', page + 1 );
+  const handlePage  = (p:any) => {
+    if(p <= news?.last_page){
+      params.set('page', p  );
       replace(`${pathname}?${params.toString()}`);
     }
   };
 
   useEffect(()=>{
-    setNewsArr((state:any)=>_.sortedUniq([...state,...news?.data]))
+    setNewsArr(news?.data)
   },[news])
   return (
     <Container  className='py-[120px] md:py-[160px]' >
@@ -37,8 +37,21 @@ export default function NewsPage({news}:any) {
         )):""
        }
     </div>
-     { page < news?.last_page? <div onClick={handlePage} className='w-full px-4 py-3 text-white text-center rounded mt-9 cursor-pointer bg-[#13399A]'>
-      load more
+   
+      {news?.last_page > 1 ?  <div className="flex justify-center space-x-2 mt-6">
+        {Array.from({ length: news?.last_page }, (_, index) => index + 1).map((p) => (
+          <button
+            key={p}
+            onClick={() => handlePage(Number(p))}
+            className={`px-4 py-2 rounded-lg border ${
+              p === news?.current_page
+                ? "bg-blue-500 text-white border-blue-500"
+                : "bg-white text-blue-500 border-gray-300"
+            } hover:bg-blue-100`}
+          >
+            {p}
+          </button>
+        ))}
       </div>:""}
 </Container>
   )
