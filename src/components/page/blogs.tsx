@@ -27,24 +27,33 @@ export default function BlogsPage({ blogs: initialBlogs, categories }: BlogsPage
   const [value, setValue] = useState<Category | null>(null);
   const [page,setPage ] = useState(1)
   async function getBlogsByCategory(param: any) {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/blogs?category_id=${param.categoryId}`);
-    if (res.ok) {
-      const data = await res.json();
-      setBlogs(data?.data|| []); 
-    } else {
-      console.error('Failed to fetch blogs');
+    try {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/blogs?category_id=${param.categoryId}`);
+        if (res.ok) {
+          const data = await res.json();
+          setBlogs(data?.data|| []); 
+        } else {
+          console.error('Failed to fetch blogs');
+        }
+    } catch (error) {
+      console.error("Error:", error);
+      return null;
     }
   }
     async function getBlogsByPage(param: any) {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/blogs?page=${param.page}${param.categoryId?`&category_id=${param.categoryId}`:""}`);
-    if (res.ok) {
-      const data = await res.json();
-      setBlogs(data?.data)
-    } else {
-      console.error('Failed to fetch blogs');
-    }
+      try {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/blogs?page=${param.page}${param.categoryId?`&category_id=${param.categoryId}`:""}`);
+        if (res.ok) {
+          const data = await res.json();
+          setBlogs(data?.data)
+        } else {
+          console.error('Failed to fetch blogs');
+        }
+      } catch (error) {
+        console.error("Error:", error);
+        return null;
+      }
   }
-
   useEffect(() => {
       getBlogsByCategory({categoryId:value?value.id :null,page: page||1} );
   }, [value]);

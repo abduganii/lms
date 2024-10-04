@@ -1,11 +1,10 @@
 import GraduatesPage from "@/components/page/graduates";
+import { fetchData } from "@/service/get";
+
 async function getGraduates() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/graduated-user`);
-  if (!res.ok) {
-    return console.log("errr");
-  }
-  return res.json();
+  return fetchData(`${process.env.NEXT_PUBLIC_URL}/graduated-user`);
 }
+
 export default async function graduates() {
   const graduates = await getGraduates()
 

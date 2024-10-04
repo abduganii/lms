@@ -1,13 +1,9 @@
 import NewsIdPage from '@/components/page/news-id'
+import { fetchData } from '@/service/get';
 import React from 'react'
 
-
 async function getNews({id}:any) {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/posts/${id}`);
-  if (!res.ok) {
-    return console.log("errr");
-  }
-  return res.json();
+  return fetchData(`${process.env.NEXT_PUBLIC_URL}/posts/${id}`);
 }
 
 export default async function NewsSinglePage({ params: { id }}:any) {

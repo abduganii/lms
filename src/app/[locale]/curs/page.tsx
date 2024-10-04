@@ -1,11 +1,8 @@
 import TrainingVideosPage from "@/components/page/training-videos";
+import { fetchData } from "@/service/get";
 
-async function getCourses({page}:any) {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/courses/?page=${page||1}`);
-  if (!res.ok) {
-    return console.log("errr");
-  }
-  return res.json();
+async function getCourses({ page }: any) {
+  return fetchData(`${process.env.NEXT_PUBLIC_URL}/courses?page=${page}`);
 }
 export default async function Curs({searchParams}:any) {
   const curs = await getCourses({ page: searchParams?.page })
