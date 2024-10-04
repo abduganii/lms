@@ -28,7 +28,7 @@ export default function NewsIdPage({ news }: any) {
         <p className="text-[#48535B]  text-base font-normal leading-[26px]">
         {news?.description}
         </p>
-        <Link className='inline-block decoration-1 text-blue-400' href={news?.og_url}>{news?.og_url}</Link>
+        {news?.og_url &&<Link className='inline-block decoration-1 text-blue-400' href={news?.og_url}>{news?.og_url}</Link>}
       </div>
 
       <div className="w-full md:max-w-[270px]">
