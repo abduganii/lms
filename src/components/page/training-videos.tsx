@@ -25,6 +25,11 @@ export default function TrainingVideosPage({curs,category}:any) {
       params.set('category', p?.id  );
       replace(`${pathname}?${params.toString()}`);
   };
+
+  useEffect(()=>{
+    // const currentPath = window.location.pathname; 
+    replace(`${pathname}`);
+  },[])
   useEffect(()=>{
     setcursArr(curs?.data)
   },[curs])
@@ -41,9 +46,9 @@ export default function TrainingVideosPage({curs,category}:any) {
       />
     <div className="flex  flex-wrap gap-6 mt-8 ">
     {
-    cursArr?.length && cursArr?.map((e:any)=>(
+    cursArr?.length ? cursArr?.map((e:any)=>(
           <CursCard className='colm2' image={e?.img} key={e?.id} navlink={`/curs/${e?.id}`} title={e?.name} end_date={e?.end_date} start_date={e?.start_date}/>
-      ))
+      )):"no data"
   }
                    
     </div>
