@@ -1,8 +1,10 @@
 'use client'
-import React, { useState, useEffect } from 'react';
-import Container from '../ui/container';
-import NewsCard from '../card/news';
+import React, { useEffect, useState } from 'react'
+import Container from '../ui/container'
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import _ from 'lodash'
 import SelectLocal from '../ui/select';
+import NewsCard from '../card/news';
 
 interface Blog {
   id: number;
@@ -22,57 +24,45 @@ interface BlogsPageProps {
   categories: Category[];
 }
 
-export default function BlogsPage({ blogs: initialBlogs, categories }: BlogsPageProps) {
-  const [blogs, setBlogs] = useState<Blog[]>(initialBlogs?.data||[]); 
-  const [value, setValue] = useState<Category | null>(null);
-  const [page,setPage ] = useState(1)
-  async function getBlogsByCategory(param: any) {
-    try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/blogs?category_id=${param.categoryId}`);
-        if (res.ok) {
-          const data = await res.json();
-          setBlogs(data?.data|| []); 
-        } else {
-          console.error('Failed to fetch blogs');
-        }
-    } catch (error) {
-      console.error("Error:", error);
-      return null;
-    }
-  }
-    async function getBlogsByPage(param: any) {
-      try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/blogs?page=${param.page}${param.categoryId?`&category_id=${param.categoryId}`:""}`);
-        if (res.ok) {
-          const data = await res.json();
-          setBlogs(data?.data)
-        } else {
-          console.error('Failed to fetch blogs');
-        }
-      } catch (error) {
-        console.error("Error:", error);
-        return null;
-      }
-  }
-  useEffect(() => {
-      getBlogsByCategory({categoryId:value?value.id :null,page: page||1} );
-  }, [value]);
+export default function BlogsPage({ blogs, categories }: BlogsPageProps) {
+  const [blogsArr, setBlogs] = useState<any>(); 
+  const [categoryArr,setcategoryArr] = useState<any>([])
+  const searchParams = useSearchParams();
+  const { replace } = useRouter();
+  const pathname = usePathname();
+  const params = new URLSearchParams(searchParams);
 
-  useEffect(() => {
-    getBlogsByPage({categoryId:value?value.id :null,page: page||1} );
-}, [page]);
+  const handlePage  = (p:any) => {
+    if(p <= blogs?.last_page){
+      params.set('page', p  );
+      replace(`${pathname}?${params.toString()}`);
+    }
+  };
+
+  const handlecategory = (p: any) => {
+    setcategoryArr(p)
+      params.set('category', p?.id  );
+      replace(`${pathname}?${params.toString()}`);
+  };
+
+  useEffect(()=>{
+    replace(`${pathname}`);
+  },[])
+  useEffect(()=>{
+    setBlogs(blogs?.data)
+  },[blogs])
   return (
     <Container className='py-[120px] md:py-[160px]'>
       <h3 className="text-4xl font-semibold leading-[38.73px] text-left">Blogs</h3>
       <SelectLocal 
-        value={value} 
-        setValue={setValue} 
+        value={categoryArr} 
+        setValue={handlecategory} 
         text={"Все категории"} 
         optionskey={'title'} 
         options={categories} 
       />
       <div className="flex items-center flex-wrap gap-6 mt-8">
-        {blogs?.length ? blogs.map((blog: Blog, key: number) => (
+        {blogsArr?.length ? blogsArr.map((blog: Blog, key: number) => (
           <NewsCard 
             image={blog.image} 
             className={key < 2 ? "colm1" : 'colm2'} 
@@ -85,13 +75,13 @@ export default function BlogsPage({ blogs: initialBlogs, categories }: BlogsPage
       </div>
     
 
-      { initialBlogs?.last_page > 1 ?  <div className="flex justify-center space-x-2 mt-6">
-        {Array.from({ length: initialBlogs?.last_page }, (_, index) => index + 1).map((p) => (
+      { blogs?.last_page > 1 ?  <div className="flex justify-center space-x-2 mt-6">
+        {Array.from({ length: blogs?.last_page }, (_, index) => index + 1).map((p) => (
           <button
             key={p}
-            onClick={() => setPage(p)}
+            onClick={() => handlePage(Number(p))}
             className={`px-4 py-2 rounded-lg border ${
-              p === initialBlogs?.current_page
+              p === blogs?.current_page
                 ? "bg-blue-500 text-white border-blue-500"
                 : "bg-white text-blue-500 border-gray-300"
             } hover:bg-blue-100`}

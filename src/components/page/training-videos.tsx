@@ -12,7 +12,7 @@ export default function TrainingVideosPage({curs,category}:any) {
   const { replace } = useRouter();
   const pathname = usePathname();
   const params = new URLSearchParams(searchParams);
-  const page: any = params.get('page')? Number(params.get('page')) : 1
+
   const handlePage  = (p:any) => {
     if(p <= curs?.last_page){
       params.set('page', p  );
@@ -27,7 +27,6 @@ export default function TrainingVideosPage({curs,category}:any) {
   };
 
   useEffect(()=>{
-    // const currentPath = window.location.pathname; 
     replace(`${pathname}`);
   },[])
   useEffect(()=>{

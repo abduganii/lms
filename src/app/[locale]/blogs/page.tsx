@@ -1,8 +1,8 @@
 import BlogsPage from "@/components/page/blogs";
 import { fetchData } from "@/service/get";
 
-async function getBlogs({page}:any) {
-  return  fetchData(`${process.env.NEXT_PUBLIC_URL}/blogs`);
+async function getBlogs({page, category}:any) {
+  return  fetchData(`${process.env.NEXT_PUBLIC_URL}/blogs?page=${page || 1}${category && `&category_id=${category}`}`);
 }
 
 async function getBlogsCategories() {
@@ -10,8 +10,8 @@ async function getBlogsCategories() {
 }
 
 // /api/blogs-categories/list
-export default async function Blogs() {
-  const blogs = await getBlogs({ page: 1 })
+export default async function Blogs({ searchParams }: any) {
+  const blogs = await getBlogs({ page: searchParams?.page,category: searchParams?.category })
   const categories = await getBlogsCategories()
   
   return (
