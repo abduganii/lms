@@ -22,8 +22,13 @@ export default function TrainingVideosPage({curs,category}:any) {
 
   const handlecategory = (p: any) => {
     setcategoryArr(p)
-      params.set('category', p?.id  );
-      replace(`${pathname}?${params.toString()}`);
+    if (p.id == 0) {
+      replace(`${pathname}`);
+    } else {
+     params.set('category', p?.id  );
+     replace(`${pathname}?${params.toString()}`);
+      
+    }
   };
 
   useEffect(()=>{
@@ -41,7 +46,7 @@ export default function TrainingVideosPage({curs,category}:any) {
         setValue={handlecategory} 
         text={"Все категории"} 
         optionskey={'name'} 
-        options={category} 
+        options={[{id:0,name:"Все категории"}, ...category]} 
       />
     <div className="flex  flex-wrap gap-6 mt-8 ">
     {

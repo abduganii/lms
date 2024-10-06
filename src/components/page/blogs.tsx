@@ -41,8 +41,13 @@ export default function BlogsPage({ blogs, categories }: BlogsPageProps) {
 
   const handlecategory = (p: any) => {
     setcategoryArr(p)
-      params.set('category', p?.id  );
-      replace(`${pathname}?${params.toString()}`);
+    if (p.id == 0) {
+      replace(`${pathname}`);
+    } else {
+     params.set('category', p?.id  );
+     replace(`${pathname}?${params.toString()}`);
+      
+    }
   };
 
   useEffect(()=>{
@@ -59,7 +64,7 @@ export default function BlogsPage({ blogs, categories }: BlogsPageProps) {
         setValue={handlecategory} 
         text={"Все категории"} 
         optionskey={'title'} 
-        options={categories} 
+        options={[{id:0,title:"Все категории"}, ...categories]} 
       />
       <div className="flex items-center flex-wrap gap-6 mt-8">
         {blogsArr?.length ? blogsArr.map((blog: Blog, key: number) => (
