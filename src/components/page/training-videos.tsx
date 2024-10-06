@@ -4,8 +4,10 @@ import Container from '../ui/container'
 import CursCard from '../card/curs'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import _ from 'lodash'
-export default function TrainingVideosPage({curs}:any) {
+import SelectLocal from '../ui/select';
+export default function TrainingVideosPage({curs,category}:any) {
   const [cursArr,setcursArr] = useState<any>([])
+  const [categoryArr,setcategoryArr] = useState<any>([])
   const searchParams = useSearchParams();
   const { replace } = useRouter();
   const pathname = usePathname();
@@ -18,14 +20,25 @@ export default function TrainingVideosPage({curs}:any) {
     }
   };
 
+  const handlecategory = (p: any) => {
+    setcategoryArr(p)
+      params.set('category', p?.id  );
+      replace(`${pathname}?${params.toString()}`);
+  };
   useEffect(()=>{
     setcursArr(curs?.data)
   },[curs])
 
-  console.log(cursArr)
   return (
     <Container  className='py-[120px] md:py-[160px]' >
-    <h3 className="text-4xl font-semibold leading-[38.73px] text-left">Курсы</h3>
+      <h3 className="text-4xl font-semibold leading-[38.73px] text-left">Курсы</h3>
+      <SelectLocal
+        value={categoryArr} 
+        setValue={handlecategory} 
+        text={"Все категории"} 
+        optionskey={'name'} 
+        options={category} 
+      />
     <div className="flex  flex-wrap gap-6 mt-8 ">
     {
     cursArr?.length && cursArr?.map((e:any)=>(
@@ -34,8 +47,6 @@ export default function TrainingVideosPage({curs}:any) {
   }
                    
     </div>
-   
-
       {curs?.last_page > 1 ?  <div className="flex justify-center space-x-2 mt-6">
         {Array.from({ length: curs?.last_page }, (_, index) => index + 1).map((p) => (
           <button

@@ -1,8 +1,6 @@
 import Image from "next/image";
-import img1 from '@/public/Frame270989841.png'
 import { DateIcons } from "../icon";
 import Link from "next/link";
-import dayjs from "dayjs"
 
 export default function CursCard({navlink='/',image,title,date,end_date,
 start_date,className}:any) {

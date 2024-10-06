@@ -69,6 +69,26 @@ input{
   width: calc((100% - 48px) / 3);
 }
 
+/* width */
+.scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 @media screen and (max-width:1220px) {
   .ContainerLeft{
     width:100%;

@@ -10,7 +10,7 @@ export default function SelectLocal({ text, value, setValue, options, optionskey
           <DownIcons/>
          
           {
-              options && open? <div className='absolute rounded-lg bg-white dark:bg-[#001E45] dark:text-[#FFFFFF] top-[60px] left-0 w-full max-w-[220px] shadow-md'>
+              options && open? <div className='absolute scrollbar max-h-[220px] overflow-y-scroll rounded-lg bg-white dark:bg-[#001E45] dark:text-[#FFFFFF] top-[60px] left-0 w-full max-w-[220px] shadow-md'>
                   {
                       options?.map((e:any) => (
                           <p
