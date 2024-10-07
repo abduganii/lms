@@ -6,6 +6,7 @@ import EducationSections from "../sections/education";
 import GraduatesSections from "../sections/graduates";
 import HeroSections from "../sections/hero";
 import NewsSections from "../sections/news";
+import PagesSections from "../sections/page";
 import PartnersSections from "../sections/partners";
 import ReviewSections from "../sections/review";
 import SubscribeSections from "../sections/subscribe";
@@ -15,9 +16,10 @@ interface HomePageinterface {
   partners: any[],
   courses:any[],
   posts:any[],
+  pages:any[]
 }
 
-export default function HomePage({graduated,partners,courses,posts}:HomePageinterface) {
+export default function HomePage({graduated,partners,courses,posts,pages}:HomePageinterface) {
   return (
   <div className="pt-[120px] md:pt-[216px]">
     <HeroSections/>
@@ -26,6 +28,7 @@ export default function HomePage({graduated,partners,courses,posts}:HomePageinte
     <ArticlesSections/>
     <CursSections courses={courses}/>
     <NewsSections posts={posts}/>
+    <PagesSections pages={pages}/>
     {/* <EducationSections/> */}
     <SubscribeSections/>
     <ReviewSections/>

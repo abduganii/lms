@@ -21,12 +21,17 @@ async function getPost({ page }: GraduatesInterface) {
   return fetchData(`${process.env.NEXT_PUBLIC_URL}/posts?page=${page}`);
 }
 
+async function getPage({page}:any) {
+  return fetchData(`${process.env.NEXT_PUBLIC_URL}/pages?page=${page || 1}`);
+}
+
 export default async function Home() {
-  const [graduated, partners, courses, posts] = await Promise.all([
+  const [graduated, partners, courses, posts, pages] = await Promise.all([
     getGraduates({ page: 1 }),
     getPartners({ page: 1 }),
     getCourses({ page: 1 }),
     getPost({ page: 1 }),
+    getPage({ page: 1 }),
   ]);
   return (
     <>
@@ -35,6 +40,7 @@ export default async function Home() {
         posts={posts?.data || []}
         graduated={graduated?.data || []}
         courses={courses?.data || []}
+        pages={pages?.data||[]}
       />
     </>
   );

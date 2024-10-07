@@ -5,7 +5,7 @@ import img1 from "@/public/Frame270989841.png";
 import dayjs from "dayjs";
 import Link from "next/link";
 
-export default function NewsIdPage({ news }: any) {
+export default function PagesIdPage({ news }: any) {
   
   return (
     <Container className="flex justify-end flex-wrap md:flex-nowrap gap-6 pt-[120px] md:pt-[160px] pb-[100px]">
@@ -21,14 +21,9 @@ export default function NewsIdPage({ news }: any) {
         <p className="text-sm font-normal leading-6 text-left flex items-center text-[#5B6871] mb-4">
           {dayjs(news?.created_at).format('YYYY.MM.DD')}
         </p>
-        <h3 className="mb-3 text-2xl font-semibold leading-[29.05px]">
-         {news?.title}
-        </h3>
+        <h3 className="mb-3 text-2xl font-semibold leading-[29.05px]"  dangerouslySetInnerHTML={{__html: news?.name}}/>
 
-        <p className="text-[#48535B]  text-base font-normal leading-[26px]">
-        {news?.description}
-        </p>
-        {news?.og_url &&<Link className='inline-block decoration-1 text-blue-400' href={news?.og_url}>{news?.og_url}</Link>}
+        <p className="text-[#48535B]  text-base font-normal leading-[26px]"  dangerouslySetInnerHTML={{__html: news?.description}}/>
       </div>
 
 
