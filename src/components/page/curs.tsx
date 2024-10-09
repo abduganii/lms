@@ -5,9 +5,9 @@ import { BlockIcons, PlayIcons } from "../icon";
 
 export default function CursPage({curs}:any) {
   return (
-    <Container className='pt-[160px] pb-[104px]'>
-        <div className="w-full flex items-center gap-10 bg-[#F5F5F5] p-10  mb-12 rounded-md dark:bg-[#001E45] dark:text-[#FFFFFF]">
-            <div className='w-full max-w-[568px]'>
+    <Container className='md:pt-[160px] pt-[120px] pb-[104px]'>
+        <div className="w-full flex md:flex-nowrap flex-wrap items-center gap-10 bg-[#F5F5F5] p-10  mb-12 rounded-md dark:bg-[#001E45] dark:text-[#FFFFFF]">
+            <div className='w-full md:max-w-[568px]'>
                   <h3 className=" text-[36px] font-semibold leading-[48px]">{ curs?.name}</h3>
                 <p className="mt-5 mb-4 text-[#5B6871] text-[14px] font-normal leading-[24px]">{curs?.description}
                 </p>
@@ -16,7 +16,7 @@ export default function CursPage({curs}:any) {
                         Регистрация 
                 </button>
             </div>
-            {curs?.img && <Image src={curs?.img } alt="img" width={464} height={384} className="w-full rounded-xl max-w-[464px]"/> }
+            {curs?.img && <Image src={curs?.img } alt="img" width={464} height={384} className="w-full rounded-xl md:max-w-[464px]"/> }
         </div>  
         <h3 className="mb-6 text-[28px] font-semibold leading-[36px]">Материалы курса</h3> 
           {curs?.context && curs?.context?.map((e:any) => (
