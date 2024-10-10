@@ -22,10 +22,11 @@ export default function BlogsIdPage({blogs}:any) {
         <h3 className="mb-3 text-2xl font-semibold leading-[29.05px]" dangerouslySetInnerHTML={{__html:blogs?.name}}/>
 
         <p className="text-[#48535B]  text-base font-normal leading-[26px]"  dangerouslySetInnerHTML={{__html: blogs?.description.replace(
-        /<oembed\s+url="(.+?)"><\/oembed>/g,
-        (_:any, url:any) =>
-          `<iframe class="w-full aspect-video" src="${url}" frameborder="0" allowfullscreen></iframe>`
-      )}}/>
+            /<oembed url="https:\/\/youtu\.be\/(.+?)".*><\/oembed>/g,
+            (match:any, videoId:any) => {
+              return `<iframe class="w-full aspect-video" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+            }
+          )}}/>
       </div>
 
       <div className="w-full md:max-w-[270px]">
