@@ -21,13 +21,10 @@ export default function NewsIdPage({ news }: any) {
         <p className="text-sm font-normal leading-6 text-left flex items-center text-[#5B6871] mb-4">
           {dayjs(news?.created_at).format('YYYY.MM.DD')}
         </p>
-        <h3 className="mb-3 text-2xl font-semibold leading-[29.05px]">
-         {news?.title}
-        </h3>
+        <h3 className="mb-3 text-2xl font-semibold leading-[29.05px]" dangerouslySetInnerHTML={{__html:news?.title}}/>
 
-        <p className="text-[#48535B]  text-base font-normal leading-[26px]">
-        {news?.description}
-        </p>
+        <p className="text-[#48535B]  text-base font-normal leading-[26px]" dangerouslySetInnerHTML={{__html:news?.description}}/>
+      
         {news?.og_url &&<Link className='inline-block decoration-1 text-blue-400' href={news?.og_url}>{news?.og_url}</Link>}
       </div>
 

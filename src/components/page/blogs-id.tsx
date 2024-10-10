@@ -19,13 +19,9 @@ export default function BlogsIdPage({blogs}:any) {
           <p className="text-sm font-normal leading-6 text-left flex items-center text-[#5B6871] mb-4">
           {dayjs(blogs?.created_at).format('YYYY.MM.DD')}
         </p>
-        <h3 className="mb-3 text-2xl font-semibold leading-[29.05px]">
-         {blogs?.name}
-        </h3>
+        <h3 className="mb-3 text-2xl font-semibold leading-[29.05px]" dangerouslySetInnerHTML={{__html:blogs?.name}}/>
 
-        <p className="text-[#48535B]  text-base font-normal leading-[26px]">
-        {blogs?.description}
-        </p>
+        <p className="text-[#48535B]  text-base font-normal leading-[26px]" dangerouslySetInnerHTML={{__html:blogs?.description}}/>
       </div>
 
       <div className="w-full md:max-w-[270px]">

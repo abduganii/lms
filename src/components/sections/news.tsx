@@ -11,7 +11,7 @@ export default function NewsSections({posts}:any) {
                 <SwiperWithScrollIcons slidesPerView={3} className="flex items-center gap-6 mt-8 ">
                     {
                         posts?.length && posts?.map((e:any)=>(
-                            <NewsCard image={e?.image} key={e?.id}  navlink={`/news/${e?.slug}`} 
+                            <NewsCard disc={e?.shortDescription} image={e?.image} key={e?.id}  navlink={`/news/${e?.slug}`} 
                              title={e?.title} date={e?.created_at}/>
                         ))
                 }

@@ -30,6 +30,7 @@ export default function PagesPage({news}:any) {
           <NewsCard key={e?.id} className={"colm2"}
             navlink={`/page/${e?.slug}`}
             image={e?.image}
+            disc={e?.shortDescription}
             title={e?.name} 
             date={e?.created_at}
           />

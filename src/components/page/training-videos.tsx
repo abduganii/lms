@@ -51,7 +51,7 @@ export default function TrainingVideosPage({curs,category}:any) {
     <div className="flex  flex-wrap gap-6 mt-8 ">
     {
     cursArr?.length ? cursArr?.map((e:any)=>(
-          <CursCard className='colm2' image={e?.img} key={e?.id} navlink={`/curs/${e?.id}`} title={e?.name} end_date={e?.end_date} start_date={e?.start_date}/>
+          <CursCard className='colm2' image={e?.img} key={e?.id} navlink={`/curs/${e?.id}`} title={e?.name}  end_date={e?.end_date} start_date={e?.start_date}/>
       )):"no data"
   }
                    
