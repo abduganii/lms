@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, { useEffect, useState } from "react";
 import Container from "../ui/container";
 import Image from "next/image";
 import img1 from "@/public/Frame270989841.png";
@@ -6,7 +7,7 @@ import dayjs from "dayjs";
 import Link from "next/link";
 
 export default function PagesIdPage({ news }: any) {
-  
+
   return (
     <Container className="flex justify-end flex-wrap md:flex-nowrap gap-6 pt-[120px] md:pt-[160px] pb-[100px]">
       <div className="w-full md:max-w-[760px]">
@@ -22,8 +23,11 @@ export default function PagesIdPage({ news }: any) {
           {dayjs(news?.created_at).format('YYYY.MM.DD')}
         </p>
         <h3 className="mb-3 text-2xl font-semibold leading-[29.05px]"  dangerouslySetInnerHTML={{__html: news?.name}}/>
-
-        <p className="text-[#48535B]  text-base font-normal leading-[26px]"  dangerouslySetInnerHTML={{__html: news?.description}}/>
+        <p className="text-[#48535B]  text-base font-normal leading-[26px]"  dangerouslySetInnerHTML={{__html: news?.description.replace(
+        /<oembed\s+url="(.+?)"><\/oembed>/g,
+        (_:any, url:any) =>
+          `<iframe width="560" height="315" src="${url}" frameborder="0" allowfullscreen></iframe>`
+      )}}/>
       </div>
 
 

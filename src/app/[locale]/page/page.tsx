@@ -8,7 +8,6 @@ async function getPage({page}:any) {
 
 export default async function News({searchParams}:any) {
   const news = await getPage({page:searchParams?.page})
-
   return (
     <>
      <PagesPage news={news}/>
