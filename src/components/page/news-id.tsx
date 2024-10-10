@@ -23,7 +23,11 @@ export default function NewsIdPage({ news }: any) {
         </p>
         <h3 className="mb-3 text-2xl font-semibold leading-[29.05px]" dangerouslySetInnerHTML={{__html:news?.title}}/>
 
-        <p className="text-[#48535B]  text-base font-normal leading-[26px]" dangerouslySetInnerHTML={{__html:news?.description}}/>
+        <p className="text-[#48535B]  text-base font-normal leading-[26px]" dangerouslySetInnerHTML={{__html:news?.description.replace(
+        /<oembed\s+url="(.+?)"><\/oembed>/g,
+        (_:any, url:any) =>
+          `<iframe width="560" height="315" src="${url}" frameborder="0" allowfullscreen></iframe>`
+      )}}/>
       
         {news?.og_url &&<Link className='inline-block decoration-1 text-blue-400' href={news?.og_url}>{news?.og_url}</Link>}
       </div>
