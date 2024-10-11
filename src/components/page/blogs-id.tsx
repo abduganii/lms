@@ -6,7 +6,7 @@ import dayjs from "dayjs";
 
 export default function BlogsIdPage({blogs}:any) {
   return (
-    <Container className="flex justify-end flex-wrap md:flex-nowrap gap-6 pt-[120px] md:pt-[160px] pb-[100px]">
+    <Container className="flex justify-center flex-wrap md:flex-nowrap gap-6 pt-[120px] md:pt-[160px] pb-[100px]">
       <div className="w-full md:max-w-[760px]">
        { blogs?.images && <Image
           className="w-full object-cover  rounded-xl aspect-[1.6/1] mb-12"
@@ -29,32 +29,7 @@ export default function BlogsIdPage({blogs}:any) {
           )}}/>
       </div>
 
-      <div className="w-full md:max-w-[270px]">
-        <div className="pb-4 mb-4 border-b border-gray-200">
-          <div className="group-hover:text-[#13399A] line-clamp-2 text-base font-semibold leading-6 text-left ">
-            Министерство юстиции Республики Узбекистан ОБЪЯВЛЯЕТ Конкурс
-          </div>
-          <p className="text-sm font-normal leading-6 text-left flex items-center text-[#5B6871]">
-            24.07.2024
-          </p>
-        </div>
-        <div className="pb-4 mb-4 border-b border-gray-200">
-          <div className="group-hover:text-[#13399A] line-clamp-2 text-base font-semibold leading-6 text-left ">
-            Министерство юстиции Республики Узбекистан ОБЪЯВЛЯЕТ Конкурс
-          </div>
-          <p className="text-sm font-normal leading-6 text-left flex items-center text-[#5B6871]">
-            24.07.2024
-          </p>
-        </div>
-        <div className="pb-4 mb-4 border-b border-gray-200">
-          <div className="group-hover:text-[#13399A] line-clamp-2 text-base font-semibold leading-6 text-left ">
-            Министерство юстиции Республики Узбекистан ОБЪЯВЛЯЕТ Конкурс
-          </div>
-          <p className="text-sm font-normal leading-6 text-left flex items-center text-[#5B6871]">
-            24.07.2024
-          </p>
-        </div>
-      </div>
+     
     </Container>
   );
 }

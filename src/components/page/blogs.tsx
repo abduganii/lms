@@ -10,7 +10,7 @@ interface Blog {
   id: number;
   name: string;
   slug: string;
-  shortDescription:string;
+  short_description:string;
   image: string;
   created_at: string;
 }
@@ -73,7 +73,7 @@ export default function BlogsPage({ blogs, categories }: BlogsPageProps) {
             image={blog.image} 
             className={key < 2 ? "colm1" : 'colm2'} 
             key={blog.id} 
-            disc={blog.shortDescription}
+            disc={blog.short_description}
             navlink={`/blogs/${blog.slug}`} 
             title={blog.name} 
             date={blog.created_at}

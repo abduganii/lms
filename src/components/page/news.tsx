@@ -30,7 +30,7 @@ export default function NewsPage({news}:any) {
         newsArr.length ?newsArr?.map((e:any)=>(
           <NewsCard key={e?.id} className={"colm2"}
             navlink={`/news/${e?.slug}`}
-            disc={e?.shortDescription}
+            disc={e?.short_description}
             image={e?.image}
             title={e?.title} 
             date={e?.created_at}

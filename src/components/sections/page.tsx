@@ -11,7 +11,7 @@ export default function PagesSections({pages}:any) {
                 <SwiperWithScrollIcons slidesPerView={3} className="flex items-center gap-6 mt-8 ">
                     {
                         pages?.length && pages?.map((e:any)=>(
-                            <NewsCard image={e?.image} key={e?.id} disc={e?.shortDescription} navlink={`/page/${e?.slug}`} 
+                            <NewsCard image={e?.image} key={e?.id} disc={e?.short_description} navlink={`/page/${e?.slug}`} 
                              title={e?.name} date={e?.created_at}/>
                         ))
                 }
