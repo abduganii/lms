@@ -1,3 +1,5 @@
+"use client"
+import { useEffect } from "react";
 import ArticlesSections from "../sections/articles";
 import BlogsSections from "../sections/blogs";
 import ContactSections from "../sections/contact";
@@ -10,6 +12,7 @@ import PagesSections from "../sections/page";
 import PartnersSections from "../sections/partners";
 import ReviewSections from "../sections/review";
 import SubscribeSections from "../sections/subscribe";
+import { fetchData } from "@/service/get";
 
 interface HomePageinterface {
   graduated: any[],
@@ -20,6 +23,9 @@ interface HomePageinterface {
 }
 
 export default function HomePage({graduated,partners,courses,posts,pages}:HomePageinterface) {
+  // useEffect(()=>{
+  //    fetchData(`${process.env.NEXT_PUBLIC_URL}/posts`).then((data)=>console.log(data))
+  // },[])
   return (
   <div className="pt-[120px] md:pt-[216px]">
     <HeroSections/>

@@ -1,10 +1,11 @@
-export async function fetchData(url: string) {
-  console.log(url);
-  try {
+
+export async function fetchData(url: string,params:string) {
+  try { 
     const res = await fetch(url, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
+        "Accept-Language": params || "en"
       },
       cache: "no-cache",
     });
