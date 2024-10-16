@@ -17,15 +17,16 @@ type FormData = {
 };
 
 export default function ContactSections() {
-    const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
+    const { register,reset, handleSubmit, formState: { errors } } = useForm<FormData>();
     const [loading,setLoading] = useState(false)
     const onSubmit = async (data: FormData) => {
         setLoading(true)
       try {
         console.log(data)
-         await axios.post('https://min-just-api.darkspace.uz/api/feedback', data)
+         await axios.post(process.env.NEXT_PUBLIC_URLS + '/feedback', data)
          .then(data=>{
             toast.success('Form submitted successfully!');
+            reset()
          })
          .catch(()=>{
             toast.error('Failed to submit form');
