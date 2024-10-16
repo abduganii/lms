@@ -1,12 +1,20 @@
+"use client"
 import React from "react";
 import Container from "../ui/container";
 import Image from "next/image";
 import img1 from "@/public/Frame270989841.png";
 import dayjs from "dayjs";
+import SwiperWithScrollIcons from "../ui/swiper";
+import NewsCard from "../card/news";
+import { useTranslation } from "react-i18next";
 
-export default function BlogsIdPage({blogs}:any) {
+export default function BlogsIdPage({blogs,vidoe}:any) {
+  console.log(vidoe,"kjhgfhgj")
+  const {i18n} = useTranslation()
   return (
-    <Container className="flex justify-center flex-wrap md:flex-nowrap gap-6 pt-[120px] md:pt-[160px] pb-[100px]">
+    <div>
+
+    <Container className="flex justify-center flex-wrap md:flex-nowrap gap-6 pt-[120px] md:pt-[160px] pb-[50px]">
       <div className="w-full md:max-w-[760px]">
        { blogs?.images && <Image
           className="w-full object-cover  rounded-xl aspect-[1.6/1] mb-12"
@@ -30,6 +38,18 @@ export default function BlogsIdPage({blogs}:any) {
       </div>
 
      
+      
     </Container>
+    <Container className="pb-[50px]">
+      <SwiperWithScrollIcons slidesPerView={3} className="flex items-center gap-6 mt-8 ">
+            {
+                vidoe?.length && vidoe?.map((e:any)=>(
+                    <NewsCard  videoLink={e?.link[i18n.language]} isVideo={true} disc={e?.name[i18n.language]} image={e?.image} key={e?.id}  
+                      title={e?.title} date={e?.created_at}/>
+                ))
+        }
+        </SwiperWithScrollIcons>
+    </Container>
+    </div>
   );
 }
