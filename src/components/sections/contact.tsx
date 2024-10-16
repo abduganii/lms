@@ -23,7 +23,7 @@ export default function ContactSections() {
         setLoading(true)
       try {
         console.log(data)
-         await axios.post(process.env.NEXT_PUBLIC_URL+'/feedback', data)
+         await axios.post('https://min-just-api.darkspace.uz/api/feedback', data)
          .then(data=>{
             toast.success('Form submitted successfully!');
          })
