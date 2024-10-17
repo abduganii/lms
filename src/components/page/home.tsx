@@ -19,10 +19,11 @@ interface HomePageinterface {
   partners: any[],
   courses:any[],
   posts:any[],
-  pages:any[]
+  pages:any[],
+  articles:any[],
 }
 
-export default function HomePage({graduated,partners,courses,posts,pages}:HomePageinterface) {
+export default function HomePage({graduated,partners,courses,posts,pages,articles}:HomePageinterface) {
   // useEffect(()=>{
   //    fetchData(`${process.env.NEXT_PUBLIC_URL}/posts`).then((data)=>console.log(data))
   // },[])
@@ -31,7 +32,7 @@ export default function HomePage({graduated,partners,courses,posts,pages}:HomePa
     <HeroSections/>
     <PartnersSections partners={partners}/>
     <GraduatesSections graduated={graduated}/>
-    <ArticlesSections/>
+    <ArticlesSections articles={articles}/>
     <CursSections courses={courses}/>
     <NewsSections posts={posts}/>
     <PagesSections pages={pages}/>

@@ -1,71 +1,60 @@
+'use client'
 import Link from "next/link";
 import { DownIcons , RightIcons2 } from "../icon";
 import Container from "../ui/container";
+import { usePathname,useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
+import dayjs from "dayjs";
 
-export default function ResourcesPage() {
+export default function ResourcesPage({articles}:any) {
+  const [ResourcesArr,setResourcesArr] = useState<any>([])
+  const searchParams = useSearchParams();
+  const { replace } = useRouter();
+  const pathname = usePathname();
+  const params = new URLSearchParams(searchParams);
+  const handlePage  = (p:any) => {
+    if(p <= articles?.last_page){
+      params.set('page', p  );
+      replace(`${pathname}?${params.toString()}`);
+    }
+  };
+
+  useEffect(()=>{
+    setResourcesArr(articles?.data)
+  },[articles])
   return (
     <Container  className='py-[120px] md:py-[160px]' >
     <h3 className="text-4xl font-semibold leading-[38.73px] text-left mb-4">Источники</h3>
-      <div className="flex flex-wrap md:flex-nowrap gap-3 mb-8">
-        <div className="w-full cursor-pointer flex items-center justify-between sm:max-w-[220px] bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] py-3 px-5 rounded-md">
-          <p className="text-[14px] font-medium leading-[24px]">Все темы</p>
-          <DownIcons/>
-        </div>
-        <div className="w-full cursor-pointer flex items-center justify-between sm:max-w-[220px] bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] py-3 px-5 rounded-md">
-          <p className="text-[14px] font-medium leading-[24px]">Дата</p>
-          <DownIcons/>
-        </div>
-        <div className="w-full cursor-pointer flex items-center justify-between sm:max-w-[220px] bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] py-3 px-5 rounded-md">
-          <p className="text-[14px] font-medium leading-[24px]">По органу</p>
-          <DownIcons/>
-        </div>
-        <div className="w-full cursor-pointer flex items-center justify-between sm:max-w-[220px] bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] py-3 px-5 rounded-md">
-          <p className="text-[14px] font-medium leading-[24px]">По формам</p>
-          <DownIcons/>
-        </div>
-      </div>
-
-      <Link href={'/resources/1'} className="w-full cursor-pointer flex items-center  justify-between bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-4 rounded-lg mb-4">
-         <div>
-          <p className="text-[16px] font-medium leading-[26px] mb-3">Список международных меморандумов и соглашений Академии Генеральной прокуратуры Республики Узбекистан</p>
-          <div className="flex items-center gap-2">
-            <p className="text-[14px] font-medium leading-[24px]">А. Хусановs</p>
-            <p className="text-sm font-normal leading-6 text-left flex items-center gap-2" ><span className="bg-[#D5DADD] w-[6px] h-[6px] rounded-full"></span> 17.08.2024</p>
-          </div>
-         </div>
-         <RightIcons2/> 
-      </Link>
+     {
+        ResourcesArr && ResourcesArr.map((e:any)=>(
+          <Link href={`/resources/${e?.id}`} className="w-full cursor-pointer flex items-center  justify-between bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-4 rounded-lg mb-4">
+            <div>
+            <p className="text-[16px] font-medium leading-[26px] mb-3" dangerouslySetInnerHTML={{__html:e?.title}}/>
+            <div className="flex items-center gap-2">
+              <p className="text-[14px] font-medium leading-[24px]"dangerouslySetInnerHTML={{__html:e?.author}}/>
+              <p className="text-sm font-normal leading-6 text-left flex items-center gap-2" ><span className="bg-[#D5DADD] w-[6px] h-[6px] rounded-full"></span> {dayjs(e?.created_at).format('YYYY.MM.DD')}</p>
+            </div>
+            </div>
+            <RightIcons2/> 
+        </Link>
+        ))
+    }
      
-      <Link href={'/resources/1'} className="w-full cursor-pointer flex items-center  justify-between bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-4 rounded-lg mb-4">
-         <div>
-          <p className="text-[16px] font-medium leading-[26px] mb-3">Список международных меморандумов и соглашений Академии Генеральной прокуратуры Республики Узбекистан</p>
-          <div className="flex items-center gap-2">
-            <p className="text-[14px] font-medium leading-[24px]">А. Хусановs</p>
-            <p className="text-sm font-normal leading-6 text-left flex items-center gap-2" ><span className="bg-[#D5DADD] w-[6px] h-[6px] rounded-full"></span> 17.08.2024</p>
-          </div>
-         </div>
-         <RightIcons2/> 
-      </Link>
-      <Link href={'/resources/1'} className="w-full cursor-pointer flex items-center  justify-between bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-4 rounded-lg mb-4">
-         <div>
-          <p className="text-[16px] font-medium leading-[26px] mb-3">Список международных меморандумов и соглашений Академии Генеральной прокуратуры Республики Узбекистан</p>
-          <div className="flex items-center gap-2">
-            <p className="text-[14px] font-medium leading-[24px]">А. Хусановs</p>
-            <p className="text-sm font-normal leading-6 text-left flex items-center gap-2" ><span className="bg-[#D5DADD] w-[6px] h-[6px] rounded-full"></span> 17.08.2024</p>
-          </div>
-         </div>
-         <RightIcons2/> 
-      </Link>
-      <Link href={'/resources/1'} className="w-full cursor-pointer flex items-center  justify-between bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-4 rounded-lg mb-4">
-         <div>
-          <p className="text-[16px] font-medium leading-[26px] mb-3">Список международных меморандумов и соглашений Академии Генеральной прокуратуры Республики Узбекистан</p>
-          <div className="flex items-center gap-2">
-            <p className="text-[14px] font-medium leading-[24px]">А. Хусановs</p>
-            <p className="text-sm font-normal leading-6 text-left flex items-center gap-2" ><span className="bg-[#D5DADD] w-[6px] h-[6px] rounded-full"></span> 17.08.2024</p>
-          </div>
-         </div>
-         <RightIcons2/> 
-      </Link>
+      {articles?.last_page > 1 ?  <div className="flex justify-center space-x-2 mt-6">
+        {Array.from({ length: articles?.last_page }, (_, index) => index + 1).map((p) => (
+          <button
+            key={p}
+            onClick={() => handlePage(Number(p))}
+            className={`px-4 py-2 rounded-lg border ${
+              p === articles?.current_page
+                ? "bg-blue-500 text-white border-blue-500"
+                : "bg-white text-blue-500 border-gray-300"
+            } hover:bg-blue-100`}
+          >
+            {p}
+          </button>
+        ))}
+      </div>:""}
   </Container>
   )
 }

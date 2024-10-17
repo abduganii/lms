@@ -1,8 +1,14 @@
 import ResourcesById from '@/components/page/resources-id'
+import { fetchData } from '@/service/get';
 import React from 'react'
+async function getArticles({id,lang}:any) {
+  return fetchData(`${process.env.NEXT_PUBLIC_URL}/articles/${id}`,lang);
+}
 
-export default function ResourcesId() {
+export default async function ResourcesId({ params: { id ,locale }}:any) {
+  const articles = await getArticles({id:id,lang:locale})
+
   return (
-    <><ResourcesById/></>
+    <><ResourcesById articles={articles}/></>
   )
 }

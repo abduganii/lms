@@ -26,13 +26,18 @@ async function getPage({page,lang}:any) {
   return fetchData(`${process.env.NEXT_PUBLIC_URL}/pages?page=${page || 1}`,lang);
 }
 
+async function getArticles({page,lang}:any) {
+  return fetchData(`${process.env.NEXT_PUBLIC_URL}/articles?page=${page || 1}`,lang);
+}
+
 export default async function Home({ params: { locale }}:any) {
-  const [graduated, partners, courses, posts, pages] = await Promise.all([
+  const [graduated, partners, courses, posts, pages, articles] = await Promise.all([
     getGraduates({ page: 1 ,lang:locale}),
     getPartners({ page: 1 ,lang:locale}),
     getCourses({ page: 1 ,lang:locale}),
     getPost({ page: 1 ,lang:locale}),
     getPage({ page: 1 ,lang:locale}),
+    getArticles({ page: 1 ,lang:locale}),
   ]);
 
   return (
@@ -43,6 +48,7 @@ export default async function Home({ params: { locale }}:any) {
         graduated={graduated?.data || []}
         courses={courses?.data || []}
         pages={pages?.data||[]}
+        articles={articles?.data || []}
       />
     </>
   );
