@@ -8,7 +8,7 @@ export default function GraduatesPage({ graduates }: any) {
   const {t,i18n} = useTranslation()
   return (
     <Container  className='py-[120px] md:py-[160px]' >
-    <h3 className="text-4xl font-semibold leading-[38.73px] text-left">Выпускники</h3>
+      <h3 className="text-4xl font-semibold leading-[38.73px] text-left">{ t('graduates')}</h3>
     <div className="flex items-center gap-6 mt-8 ">
     {
       graduates && graduates?.map((e:any)=>(

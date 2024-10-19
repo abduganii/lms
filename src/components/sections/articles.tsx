@@ -1,3 +1,5 @@
+"use client"
+import { useTranslation } from "react-i18next";
 import Container from "@/components/ui/container";
 import Link from "next/link";
 import { RightIcons } from "../icon";
@@ -5,10 +7,12 @@ import SwiperWithScrollIcons from "../ui/swiper";
 import dayjs from "dayjs";
 
 
-export default function ArticlesSections({articles}:any) {
+export default function ArticlesSections({ articles }: any) {
+     const {t} = useTranslation()
+     
     return (
             <Container  className='my-[120px]' >
-                <Link href={'/resources'} className="flex items-center text-4xl font-semibold leading-[38.73px] text-left">Статьи <RightIcons/> </Link>
+                <Link href={'/resources'} className="flex items-center text-4xl font-semibold leading-[38.73px] text-left">{t('articles')} <RightIcons/> </Link>
                 <SwiperWithScrollIcons slidesPerView={2} className="flex items-center gap-6 mt-8 ">
                     {
                         articles?.length && articles.map((e:any)=>(

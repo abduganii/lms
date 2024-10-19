@@ -18,7 +18,7 @@ export default function Footer() {
           <Link href={"/"} className="flex md:hidden items-center ml-[-15px] mb-[10px]">
                 <Image alt="img" height={39} width={62} src={logo} />
                 <h3 className="text-sm font-medium leading-5 text-left w-full max-w-[237px]">
-                  Министерство юстиции Республики Узбекистан
+                  {t('header_logo')}
                 </h3>
           </Link>
             {
@@ -41,11 +41,11 @@ export default function Footer() {
             </div>
         </div>
         <div className='flex items-center justify-between pt-5'>
-            <p className='text-sm font-normal leading-6 text-[#667085] '>© 2024. Все права защищены</p>
+            <p className='text-sm font-normal leading-6 text-[#667085] '> {t('footer_text')}</p>
             <Link href={"/"} className="hidden md:flex items-center ">
               <Image alt="img" height={64} width={97} src={logo} />
               <h3 className="text-sm font-medium leading-5 text-left w-full max-w-[237px]">
-                Министерство юстиции Республики Узбекистан
+              {t('header_logo')}
               </h3>
           </Link>
         </div>

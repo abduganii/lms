@@ -10,7 +10,6 @@ import { useTranslation } from "react-i18next";
 import Link from "next/link";
 
 export default function BlogsIdPage({blogs,vidoe}:any) {
-  console.log(blogs,"kjhgfhgj")
   const {i18n} = useTranslation()
   return (
     <div>

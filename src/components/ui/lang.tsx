@@ -14,7 +14,7 @@ const langFlag:any = {
     ru:ru,
     uz:uz,
     en:en,
-
+    uz_cyr:uz,
 }
 export default function Lang() {
     const { i18n,t } = useTranslation();

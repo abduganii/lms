@@ -1,9 +1,14 @@
+
+"use client"
+import { useTranslation } from "react-i18next";
 import Image from "next/image";
 import Container from "../ui/container";
 import img from "@/public/Frame270989841.png"
 import { BlockIcons, PlayIcons } from "../icon";
 
 export default function CursPage({curs}:any) {
+  const {t} = useTranslation()
+  
   return (
     <Container className='md:pt-[160px] pt-[120px] pb-[104px]'>
         <div className="w-full flex md:flex-nowrap flex-wrap items-center gap-10 bg-[#F5F5F5] p-10  mb-12 rounded-md dark:bg-[#001E45] dark:text-[#FFFFFF]">

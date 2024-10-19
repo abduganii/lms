@@ -14,7 +14,7 @@ export default function GraduatesSections({graduated}:Graduatedinterface) {
     const {t,i18n} = useTranslation()
     return (
             <Container  className='my-[120px]' >
-                <Link href={'/graduates'} className="flex items-center text-4xl font-semibold leading-[38.73px] text-left">Выпускники <RightIcons/> </Link>
+                <Link href={'/graduates'} className="flex items-center text-4xl font-semibold leading-[38.73px] text-left">{t('graduates')} <RightIcons/> </Link>
                 <SwiperWithScrollIcons slidesPerView={3} className="flex items-center gap-6 mt-8 ">
                   {
                       graduated && graduated?.map(e=>(

@@ -1,4 +1,6 @@
-'use client'
+
+"use client"
+import { useTranslation } from "react-i18next";
 import React, { useEffect, useState } from 'react'
 import Container from '../ui/container'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
@@ -26,6 +28,7 @@ interface BlogsPageProps {
 }
 
 export default function BlogsPage({ blogs, categories }: BlogsPageProps) {
+  const {t} = useTranslation()
   const [blogsArr, setBlogs] = useState<any>(); 
   const [categoryArr,setcategoryArr] = useState<any>([])
   const searchParams = useSearchParams();
@@ -59,13 +62,13 @@ export default function BlogsPage({ blogs, categories }: BlogsPageProps) {
   },[blogs])
   return (
     <Container className='py-[120px] md:py-[160px]'>
-      <h3 className="text-4xl font-semibold leading-[38.73px] text-left">Blogs</h3>
+      <h3 className="text-4xl font-semibold leading-[38.73px] text-left">{t('blogs')}</h3>
       <SelectLocal 
         value={categoryArr} 
         setValue={handlecategory} 
-        text={"Все категории"} 
+        text={t('all_categories')} 
         optionskey={'title'} 
-        options={[{id:0,title:"Все категории"}, ...categories]} 
+        options={[{id:0,title:t('all_categories')}, ...categories]} 
       />
       <div className="flex items-center flex-wrap gap-6 mt-8">
         {blogsArr?.length ? blogsArr.map((blog: Blog, key: number) => (

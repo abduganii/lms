@@ -1,12 +1,17 @@
+
+"use client"
+import { useTranslation } from "react-i18next";
 import Image from "next/image";
 import Container from "../ui/container";
 import  person from '@/public/person.png'
 import SwiperWithScrollIcons from "../ui/swiper";
 export default function ReviewSections() {
+    const {t} = useTranslation()
+
     return (   
         <Container className='my-[120px]'>
             <div className="flex items-center justify-between mb-[32px]">
-                <h3 className="text-4xl font-semibold leading-[38.73px] text-left">Отзыв</h3>
+                <h3 className="text-4xl font-semibold leading-[38.73px] text-left">{t('review')}</h3>
             </div>
             <SwiperWithScrollIcons slidesPerView={3} className="flex gap-6">
                 <div className="w-full rounded-lg  dark:bg-[#001E45] bg-[#F1F1F1] p-6">

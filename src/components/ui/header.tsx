@@ -24,7 +24,7 @@ export default function Header() {
           <Link href={"/"} className="flex items-center">
             <Image alt="img" height={64} width={97} className=' w-[62px] md:w-[97px]' src={logo} />
             <h3 className=" text-sm font-medium leading-5 text-left w-full max-w-[237px]">
-              Министерство юстиции Республики Узбекистан
+              {t('header_logo')}
             </h3>
           </Link>
 

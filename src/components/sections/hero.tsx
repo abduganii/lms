@@ -1,19 +1,21 @@
-import Container from "@/components/ui/container";
+"use client"
+import { useTranslation } from "react-i18next";
 import Image from "next/image";
 import img1 from '@/public/content.png'
 import img2 from '@/public/iPhone.png'
 import img3 from '@/public/image8.png'
+
 export default function HeroSections() {
+    const {t} = useTranslation()
     return (
             <div className='flex items-center flex-wrap md:flex-nowrap justify-between ContainerLeft'>
                 <div className="w-full md:max-w-[492px]">
                         <h2 className="text-3xl mb-2 md:mb-0 md:text-4xl font-semibold  leading-[29.05px] md:leading-[50px] text-left">
-                            Министерство юстиции
-                            Республики Узбекистан
+                    {t('header_logo')}
                         </h2>
-                        <p className="mb-6 text-base font-normal leading-7 text-left">Последовательное осуществление единой государственной политики в сфере нормотворчества и правоприменительной практики</p>
+                        <p className="mb-6 text-base font-normal leading-7 text-left"> {t('hero_text')}</p>
                         <button className="inline-block bg-[#13399A] rounded-xl px-[22px] py-[11px]  text-white text-base font-semibold leading-7 text-left">
-                        Регистрация 
+                        {t('sign_in')} 
                         </button>
                 </div>
                 <div className="relative">

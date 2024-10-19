@@ -1,4 +1,6 @@
-'use client'
+
+"use client"
+import { useTranslation } from "react-i18next";
 import React, { useEffect, useState } from 'react'
 import Container from '../ui/container'
 import CursCard from '../card/curs'
@@ -6,6 +8,7 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import _ from 'lodash'
 import SelectLocal from '../ui/select';
 export default function TrainingVideosPage({curs,category}:any) {
+  const {t} = useTranslation()
   const [cursArr,setcursArr] = useState<any>([])
   const [categoryArr,setcategoryArr] = useState<any>([])
   const searchParams = useSearchParams();
@@ -40,13 +43,13 @@ export default function TrainingVideosPage({curs,category}:any) {
 
   return (
     <Container  className='py-[120px] md:py-[160px]' >
-      <h3 className="text-4xl font-semibold leading-[38.73px] text-left">Курсы</h3>
+      <h3 className="text-4xl font-semibold leading-[38.73px] text-left">{ t('curs')}</h3>
       <SelectLocal
         value={categoryArr} 
         setValue={handlecategory} 
-        text={"Все категории"} 
+        text={t('all_categories')} 
         optionskey={'name'} 
-        options={[{id:0,name:"Все категории"}, ...category]} 
+        options={[{id:0,name:t('all_categories')}, ...category]} 
       />
     <div className="flex  flex-wrap gap-6 mt-8 ">
     {

@@ -1,12 +1,10 @@
 import React from "react";
 import Container from "../ui/container";
 import Image from "next/image";
-import img1 from "@/public/Frame270989841.png";
 import dayjs from "dayjs";
 import Link from "next/link";
 
 export default function NewsIdPage({ news }: any) {
-    console.log(news,"here")
   return (
     <Container className="flex justify-center flex-wrap md:flex-nowrap gap-6 pt-[120px] md:pt-[160px] pb-[100px]">
       <div className="w-full md:max-w-[760px]">
