@@ -21,7 +21,7 @@ export default function ResourcesById({articles}:any) {
         <SocketIcons/>
       </div>
      
-      {articles?.type == "file" ? articles?.files.map((e:any,i)=>(
+      {articles?.type == "file" ? articles?.files.map((e:any, i:any)=>(
         <object
           key={i}
         data={e}
