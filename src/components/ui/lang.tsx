@@ -24,18 +24,19 @@ export default function Lang() {
   const [open, setOpen] = useState(false)
 
   const handleChange = (e:any) => {
-        const newLocale = e.target.getAttribute("value");
+      const newLocale = e.target.getAttribute("value");
         setOpen(false)
         const days = 30;
         const date = new Date();
         date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
         const expires = '; expires=' + date.toUTCString();
         document.cookie = `NEXT_LOCALE=${newLocale};expires=${expires};path=/`;
-        // router.push('/' + newLocale + currentPathname);
-        router.push(
-            currentPathname.replace(`/${currentLocale}`, `/${newLocale}`)
-        )
-        router.refresh();
+      if (newLocale) {
+          router.push(
+              currentPathname.replace(`/${currentLocale}`, `/${newLocale}`)
+          )
+          router.refresh();
+      }
     };
     return (
       <>

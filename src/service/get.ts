@@ -1,10 +1,11 @@
 export async function fetchData(url: string, params: string) {
+  console.log(params);
   try {
     const res = await fetch(url, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "Accept-Language": params == "uz_cyr" ? "uz-cyr" : params || "en",
+        "Accept-Language": params === "uz_cyr" ? "uz-cyr" : params || "en",
       },
       cache: "no-cache",
     });
