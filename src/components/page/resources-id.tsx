@@ -22,10 +22,11 @@ export default function ResourcesById({articles}:any) {
       </div>
      
       {articles?.type == "file" ? articles?.files.map((e:any)=>(
-        <PdfViewer
-        fileUrl={e}
-        // style={{ width: '100%', height: '100vh', border: 'none' }}
-      />
+        <embed
+        src={e}
+        type="application/pdf"
+        style={{ width: '100%', height: '100vh', border: 'none' }}
+    />
       )):
       <p className="text-[14px] font-medium leading-[24px]"dangerouslySetInnerHTML={{__html:articles?.content[i18n.language]}}/>
       }
