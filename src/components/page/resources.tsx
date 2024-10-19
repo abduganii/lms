@@ -24,7 +24,7 @@ export default function ResourcesPage({articles}:any) {
   },[articles])
   return (
     <Container  className='py-[120px] md:py-[160px]' >
-    <h3 className="text-4xl font-semibold leading-[38.73px] text-left mb-4">Источники</h3>
+    <h3 className="text-4xl font-semibold leading-[38.73px] text-left mb-4">Статьи</h3>
      {
         ResourcesArr && ResourcesArr.map((e:any)=>(
           <Link href={`/resources/${e?.id}`} className="w-full cursor-pointer flex items-center  justify-between bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-4 rounded-lg mb-4">

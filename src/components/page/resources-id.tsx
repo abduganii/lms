@@ -3,9 +3,11 @@ import Container from '../ui/container'
 import { SocketIcons } from '../icon'
 import dayjs from 'dayjs'
 import { useTranslation } from 'react-i18next'
+import PdfViewer from '../ui/pdfViewer'
 
 export default function ResourcesById({articles}:any) {
-  const {i18n} = useTranslation()
+  const { i18n } = useTranslation()
+  console.log(articles?.files)
   return (
     <Container className='py-[120px] md:py-[160px]'>
         <div className="w-full cursor-pointer flex items-end  justify-between bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-10 rounded-lg mb-12">
@@ -18,10 +20,11 @@ export default function ResourcesById({articles}:any) {
          </div>
         <SocketIcons/>
       </div>
-      {articles.type == "file" ? articles?.files.map((e:any)=>(
-        <iframe
-        src={e}
-        style={{ width: '100%', height: '100vh', border: 'none' }}
+     
+      {articles?.type == "file" ? articles?.files.map((e:any)=>(
+        <PdfViewer
+        fileUrl={e}
+        // style={{ width: '100%', height: '100vh', border: 'none' }}
       />
       )):
       <p className="text-[14px] font-medium leading-[24px]"dangerouslySetInnerHTML={{__html:articles?.content[i18n.language]}}/>
