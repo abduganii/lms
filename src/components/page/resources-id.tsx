@@ -21,12 +21,14 @@ export default function ResourcesById({articles}:any) {
         <SocketIcons/>
       </div>
      
-      {articles?.type == "file" ? articles?.files.map((e:any)=>(
-        <embed
+      {articles?.type == "file" ? articles?.files.map((e: any) => (
+        <>
+        <object
         src={e}
         type="application/pdf"
         style={{ width: '100%', height: '100vh', border: 'none' }}
     />
+        </>
       )):
       <p className="text-[14px] font-medium leading-[24px]"dangerouslySetInnerHTML={{__html:articles?.content[i18n.language]}}/>
       }
