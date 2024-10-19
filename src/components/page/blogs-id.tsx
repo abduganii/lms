@@ -7,9 +7,10 @@ import dayjs from "dayjs";
 import SwiperWithScrollIcons from "../ui/swiper";
 import NewsCard from "../card/news";
 import { useTranslation } from "react-i18next";
+import Link from "next/link";
 
 export default function BlogsIdPage({blogs,vidoe}:any) {
-  console.log(vidoe,"kjhgfhgj")
+  console.log(blogs,"kjhgfhgj")
   const {i18n} = useTranslation()
   return (
     <div>
@@ -34,10 +35,19 @@ export default function BlogsIdPage({blogs,vidoe}:any) {
             (match:any, videoId:any) => {
               return `<iframe class="w-full aspect-video" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
             }
-          )}}/>
+          )
+          }} />
+            <p className="text-[#48535B]  text-base font-normal leading-[26px]"  dangerouslySetInnerHTML={{__html: blogs?.content.replace(
+            /<oembed url="https:\/\/youtu\.be\/(.+?)".*><\/oembed>/g,
+            (match:any, videoId:any) => {
+              return `<iframe class="w-full aspect-video" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+            }
+          )
+          }} />
+           {blogs?.og_url &&<Link className='inline-block decoration-1 text-blue-400' href={blogs?.og_url}>{blogs?.og_url}</Link>}
       </div>
 
-     
+      
       
     </Container>
     <Container className="pb-[50px]">

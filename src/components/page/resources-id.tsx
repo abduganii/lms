@@ -22,11 +22,9 @@ export default function ResourcesById({articles}:any) {
       </div>
      
       {articles?.type == "file" ? articles?.files.map((e:any, i:any)=>(
-        <object
-          key={i}
-        data={e}
-        type="application/pdf"
-        style={{ width: '100%', height: '100vh', border: 'none' }}
+            <iframe
+            src={e}
+            style={{ width: '100%', height: '100vh' }}
     />
       )):
       <p className="text-[14px] font-medium leading-[24px]"dangerouslySetInnerHTML={{__html:articles?.content[i18n.language]}}/>

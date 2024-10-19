@@ -5,7 +5,7 @@ export default function SelectLocal({ text, value, setValue, options, optionskey
     const [open,setOpen] = useState(false)
   return (
     <>
-       <div onClick={()=>setOpen(!open)} className="relative mt-8 w-full cursor-pointer flex items-center justify-between sm:max-w-[220px]  bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] py-3 px-5 rounded-lg">
+       <div onClick={()=>setOpen(!open)} className="relative mt-8 w-full z-10 cursor-pointer flex items-center justify-between sm:max-w-[220px]  bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] py-3 px-5 rounded-lg">
               <p className="text-[14px] font-medium leading-[24px]">{value?.[optionskey]|| text}</p>
           <DownIcons/>
          
