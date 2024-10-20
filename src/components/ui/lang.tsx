@@ -62,7 +62,7 @@ export default function Lang() {
                         <span className="px-2">
                         <Image src={langFlag?.[e?.value]} alt='img' width={20} height={20}/>
                         </span>
-                         {e.value}
+                         {e.label}
                          </li>
                 ))
             }
