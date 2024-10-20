@@ -34,7 +34,10 @@ export default async function RootLayout({
   const { resources } = await initTranslations(locale, i18nNamespaces)
   return (
     <html lang={locale} >
-    <body className="bg-[#fff] dark:bg-[#00132D] dark:text-[#FFFFFF]">
+      <body className="bg-[#fff] dark:bg-[#00132D] dark:text-[#FFFFFF]">
+      <head >
+          <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"></meta>
+      </head>
     <NextTopLoader
       color="#2299DD"
       initialPosition={0.08}

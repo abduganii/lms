@@ -3,16 +3,11 @@ import Container from '../ui/container'
 import { SocketIcons } from '../icon'
 import dayjs from 'dayjs'
 import { useTranslation } from 'react-i18next'
-import { useEffect, useState } from 'react'
+import PdfViewer from '../ui/pdfViewer'
 
 export default function ResourcesById({articles}:any) {
   const { i18n } = useTranslation()
-  const [file, setFile] = useState([])
-  useEffect(() => {
-    if (articles?.type == "file") {
-      setFile(articles?.files)
-    }
-  },[articles?.files])
+  console.log(articles?.files)
   return (
     <Container className='py-[120px] md:py-[160px]'>
         <div className="w-full cursor-pointer flex items-end  justify-between bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-10 rounded-lg mb-12">
@@ -26,7 +21,7 @@ export default function ResourcesById({articles}:any) {
         <SocketIcons/>
       </div>
      
-      {articles?.type == "file" ? file?.map((e:any, i:any)=>(
+      {articles?.type == "file" ? articles?.files.map((e:any, i:any)=>(
             <iframe
             src={e}
             style={{ width: '100%', height: '100vh' }}
