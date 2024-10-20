@@ -30,7 +30,7 @@ export default function ResourcesPage({articles}:any) {
       <h3 className="text-4xl font-semibold leading-[38.73px] text-left mb-4"> {t('articles')}</h3>
      {
         ResourcesArr && ResourcesArr.map((e:any)=>(
-          <Link href={`/resources/${e?.id}`} className="w-full cursor-pointer flex items-center  justify-between bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-4 rounded-lg mb-4">
+          <Link href={`/resources/${e?.id}`} key={e?.id} className="w-full cursor-pointer flex items-center  justify-between bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-4 rounded-lg mb-4">
             <div>
             <p className="text-[16px] font-medium leading-[26px] mb-3" dangerouslySetInnerHTML={{__html:e?.title}}/>
             <div className="flex items-center gap-2">
