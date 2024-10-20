@@ -6,8 +6,8 @@ async function getPage({page,lang}:any) {
   return fetchData(`${process.env.NEXT_PUBLIC_URL}/pages?page=${page || 1}`,lang);
 }
 
-export default async function News({searchParams}:any) {
-  const news = await getPage({page:searchParams?.page, lang: searchParams.locale})
+export default async function News({ params: {page,category, locale }}:any) {
+  const news = await getPage({ page: page,category: category,lang:locale })
   return (
     <>
      <PagesPage news={news}/>

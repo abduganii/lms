@@ -14,7 +14,6 @@ export default function NewsPage({news}:any) {
   const { replace } = useRouter();
   const pathname = usePathname();
   const params = new URLSearchParams(searchParams);
-  const page: any = params.get('page')? Number(params.get('page')) : 1
   const handlePage  = (p:any) => {
     if(p <= news?.last_page){
       params.set('page', p  );
