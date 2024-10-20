@@ -30,7 +30,7 @@ async function getArticles({page,lang}:any) {
   return fetchData(`${process.env.NEXT_PUBLIC_URL}/articles?page=${page || 1}`,lang);
 }
 
-export default async function Home({ params: { locale }}:any) {
+export default async function Home({ searchParams: { locale }}:any) {
   const [graduated, partners, courses, posts, pages, articles] = await Promise.all([
     getGraduates({ page: 1 ,lang:locale}),
     getPartners({ page: 1 ,lang:locale}),

@@ -11,16 +11,16 @@ import dayjs from "dayjs";
 export default function ResourcesPage({articles}:any) {
   const {t} = useTranslation()
   const [ResourcesArr,setResourcesArr] = useState<any>([])
-  // const searchParams = useSearchParams();
-  // const { replace } = useRouter();
-  // const pathname = usePathname();
-  // const params = new URLSearchParams(searchParams);
-  // const handlePage  = (p:any) => {
-  //   if(p <= articles?.last_page){
-  //     params.set('page', p  );
-  //     replace(`${pathname}?${params.toString()}`);
-  //   }
-  // };
+  const searchParams = useSearchParams();
+  const { replace } = useRouter();
+  const pathname = usePathname();
+  const params = new URLSearchParams(searchParams);
+  const handlePage  = (p:any) => {
+    if(p <= articles?.last_page){
+      params.set('page', p  );
+      replace(`${pathname}?${params.toString()}`);
+    }
+  };
 
   useEffect(()=>{
     setResourcesArr(articles?.data)
@@ -43,7 +43,7 @@ export default function ResourcesPage({articles}:any) {
         ))
     }
      
-      {/* {articles?.last_page > 1 ?  <div className="flex justify-center space-x-2 mt-6">
+      {articles?.last_page > 1 ?  <div className="flex justify-center space-x-2 mt-6">
         {Array.from({ length: articles?.last_page }, (_, index) => index + 1).map((p) => (
           <button
             key={p}
@@ -57,7 +57,7 @@ export default function ResourcesPage({articles}:any) {
             {p}
           </button>
         ))}
-      </div>:""} */}
+      </div>:""}
   </Container>
   )
 }

@@ -114,6 +114,6 @@ export const LangArr = [
   {
     id: 3,
     label: "Уз",
-    value: "uz_cyr",
+    value: "uzcyr",
   },
 ];

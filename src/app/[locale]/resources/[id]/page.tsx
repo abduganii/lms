@@ -5,7 +5,7 @@ async function getArticles({id,lang}:any) {
   return fetchData(`${process.env.NEXT_PUBLIC_URL}/articles/${id}`,lang);
 }
 
-export default async function ResourcesId({ params: { id ,locale }}:any) {
+export default async function ResourcesId({ searchParams: { id ,locale }}:any) {
   const articles = await getArticles({id:id,lang:locale})
 
   return (
