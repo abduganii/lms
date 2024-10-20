@@ -6,7 +6,7 @@ async function getNews({id,lang}:any) {
   return fetchData(`${process.env.NEXT_PUBLIC_URL}/posts/${id}`,lang);
 }
 
-export default async function NewsSinglePage({ searchParams: { id ,locale }}:any) {
+export default async function NewsSinglePage({ params: { id ,locale }}:any) {
   const news = await getNews({id:id,lang:locale})
 
   return (

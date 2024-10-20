@@ -31,15 +31,15 @@ export default function BlogsPage({ blogs, categories }: BlogsPageProps) {
   const {t} = useTranslation()
   const [blogsArr, setBlogs] = useState<any>(); 
   const [categoryArr,setcategoryArr] = useState<any>([])
-  const searchParams = useSearchParams();
+  const params = useSearchParams();
   const { replace } = useRouter();
   const pathname = usePathname();
-  const params = new URLSearchParams(searchParams);
+  const paramsValue = new URLSearchParams(params);
 
   const handlePage  = (p:any) => {
     if(p <= blogs?.last_page){
-      params.set('page', p  );
-      replace(`${pathname}?${params.toString()}`);
+      paramsValue.set('page', p  );
+      replace(`${pathname}?${paramsValue.toString()}`);
     }
   };
 
@@ -48,8 +48,8 @@ export default function BlogsPage({ blogs, categories }: BlogsPageProps) {
     if (p.id == 0) {
       replace(`${pathname}`);
     } else {
-     params.set('category', p?.id  );
-     replace(`${pathname}?${params.toString()}`);
+      paramsValue.set('category', p?.id  );
+     replace(`${pathname}?${paramsValue.toString()}`);
       
     }
   };
