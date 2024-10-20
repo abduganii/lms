@@ -31,10 +31,12 @@ export default function Lang() {
         date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
         const expires = '; expires=' + date.toUTCString();
         document.cookie = `NEXT_LOCALE=${newLocale};expires=${expires};path=/`;
+      if (newLocale) {
           router.push(
               currentPathname.replace(`/${currentLocale}`, `/${newLocale}`)
           )
           router.refresh();
+      }
     };
     return (
       <>
