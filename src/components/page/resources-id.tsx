@@ -10,7 +10,7 @@ export default function ResourcesById({articles}:any) {
   const [file, setFile] = useState([])
   useEffect(() => {
     if (articles?.type == "file") {
-      setFile(file)
+      setFile(articles?.files)
     }
   },[articles?.files])
   return (

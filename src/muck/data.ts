@@ -98,22 +98,22 @@ export const Navbar = [
 export const LangArr = [
   {
     id: 1,
-    label: "ru",
+    label: "Ru",
     value: "ru",
   },
   {
     id: 2,
-    label: "en",
+    label: "En",
     value: "en",
   },
   {
     id: 3,
-    label: "uz",
+    label: "Uz",
     value: "uz",
   },
   {
     id: 3,
-    label: "Узб",
+    label: "Уз",
     value: "uz_cyr",
   },
 ];
