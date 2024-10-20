@@ -11,14 +11,14 @@ import dayjs from "dayjs";
 export default function ResourcesPage({articles}:any) {
   const {t} = useTranslation()
   const [ResourcesArr,setResourcesArr] = useState<any>([])
-  const params = useSearchParams();
+  const searchParams = useSearchParams();
   const { replace } = useRouter();
   const pathname = usePathname();
-  const paramsValue = new URLSearchParams(params);
+  const params = new URLSearchParams(searchParams);
   const handlePage  = (p:any) => {
     if(p <= articles?.last_page){
-      paramsValue.set('page', p  );
-      replace(`${pathname}?${paramsValue.toString()}`);
+      params.set('page', p  );
+      replace(`${pathname}?${params.toString()}`);
     }
   };
 

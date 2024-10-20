@@ -10,14 +10,14 @@ import _ from 'lodash'
 export default function NewsPage({news}:any) {
   const {t} = useTranslation()
   const [newsArr,setNewsArr] = useState<any>([])
-  const params = useSearchParams();
+  const searchParams = useSearchParams();
   const { replace } = useRouter();
   const pathname = usePathname();
-  const paramsValue = new URLSearchParams(params);
+  const params = new URLSearchParams(searchParams);
   const handlePage  = (p:any) => {
     if(p <= news?.last_page){
-      paramsValue.set('page', p  );
-      replace(`${pathname}?${paramsValue.toString()}`);
+      params.set('page', p  );
+      replace(`${pathname}?${params.toString()}`);
     }
   };
 

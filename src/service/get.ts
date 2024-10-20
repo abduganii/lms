@@ -4,7 +4,7 @@ export async function fetchData(url: string, params: string) {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "Accept-Language": params === "uzcyr" ? "uz-cyr" : params,
+        "Accept-Language": params === "uz_cyr" ? "uz-cyr" : params,
       },
       cache: "no-cache",
     });

@@ -11,15 +11,15 @@ export default function TrainingVideosPage({curs,category}:any) {
   const {t} = useTranslation()
   const [cursArr,setcursArr] = useState<any>([])
   const [categoryArr,setcategoryArr] = useState<any>([])
-  const params = useSearchParams();
+  const searchParams = useSearchParams();
   const { replace } = useRouter();
   const pathname = usePathname();
-  const paramsValue = new URLSearchParams(params);
+  const params = new URLSearchParams(searchParams);
 
   const handlePage  = (p:any) => {
     if(p <= curs?.last_page){
-      paramsValue.set('page', p  );
-      replace(`${pathname}?${paramsValue.toString()}`);
+      params.set('page', p  );
+      replace(`${pathname}?${params.toString()}`);
     }
   };
 
@@ -28,8 +28,8 @@ export default function TrainingVideosPage({curs,category}:any) {
     if (p.id == 0) {
       replace(`${pathname}`);
     } else {
-      paramsValue.set('category', p?.id  );
-     replace(`${pathname}?${paramsValue.toString()}`);
+     params.set('category', p?.id  );
+     replace(`${pathname}?${params.toString()}`);
       
     }
   };
