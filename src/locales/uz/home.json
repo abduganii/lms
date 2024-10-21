@@ -39,5 +39,7 @@
     "advantagestitle1": "Moslashuvchan kirish tizimi",
     "advantagestext1": "Foydalanuvchilar kurslarga ariza berishlari mumkin, administratorlar esa kirishni tezda boshqarishlari mumkin, bu ariza holati va vaqtga qarab berish yoki cheklashni amalga oshiradi.",
     "advantagestitle2": "Moslashuvchanlik va mavjudlik",
-    "advantagestext2": "Veb-sayt turli qurilmalarga moslashtirilgan, bu ta'limni har qanday joyda va har qanday vaqtda olish imkonini beradi, ta'lim jarayonini maksimal darajada moslashuvchan va mavjud qiladi."
+    "advantagestext2": "Veb-sayt turli qurilmalarga moslashtirilgan, bu ta'limni har qanday joyda va har qanday vaqtda olish imkonini beradi, ta'lim jarayonini maksimal darajada moslashuvchan va mavjud qiladi.",
+    "start_date": "boshlanish sanasi",
+    "end_date": "tugash sanasi"
 }

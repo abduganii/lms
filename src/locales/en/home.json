@@ -39,6 +39,8 @@
     "advantagestitle1": "Flexible Access System",
     "advantagestext1": "Users can apply for courses, and administrators can quickly manage access, granting or restricting it based on the application status and time.",
     "advantagestitle2": "Adaptability and Accessibility",
-    "advantagestext2": "The site is adapted for various devices, allowing learning anywhere and anytime, making the learning process as flexible and accessible as possible."
+    "advantagestext2": "The site is adapted for various devices, allowing learning anywhere and anytime, making the learning process as flexible and accessible as possible.",
+    "start_date": "start date",
+    "end_date": "end date"
     
 }
