@@ -40,10 +40,10 @@ export default function Footer() {
               <a target="_blank" href='https://t.me/antikorbot'>
                 <TelegramIcons color={`#5B6871`} iconsColor={'#5B6871'}/>
               </a>
-              <a target="_blank" href='https://www.facebook.com/minjustuz'>
+              <a target="_blank" href='https://www.instagram.com/adliyanews/'>
                 <InstagramIcons color={`#5B6871`} iconsColor={'#5B6871'}/>
               </a>
-              <a target="_blank" href='https://www.instagram.com/adliyanews/'>
+              <a target="_blank" href='https://www.facebook.com/minjustuz/'>
                 <FacebookIcons color={`#5B6871`} iconsColor={'#5B6871'}/>
               </a>
               <a target="_blank" href='https://www.facebook.com/groups/588441011280149'>
