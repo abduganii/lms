@@ -33,5 +33,11 @@
     "go": "O‘tish",
     "about-us_title": "Biz haqimizda",
     "about-us_text": "Davlat rahbari Shavkat Mirziyoyev tashabbusi bilan adliya organlari aholi bilan bevosita joylarda, mahallalarda huquqiy masalalarni hal etishga mas'ul, ko‘proq xalqparvar tuzilmaga aylantirildi. Birinchidan, adliya organlari aholining kundalik hayotida yuzaga keladigan huquqiy muammolarni aniqlash va tahlil qilish bo‘yicha amaliy choralar ko‘radi hamda ularni hal qilishga qaratilgan qonunchilik loyihalarini ishlab chiqadi.",
-    "advantages": "Afzalliklar"
+ "advantages": "Afzalliklar",
+    "advantagestitle": "Qulay ta'lim boshqaruvi",
+    "advantagestext": "Veb-sayt shaxsiy kabinetni taqdim etadi, bu yerda foydalanuvchilar kurslar bo'yicha o'z progressini osonlik bilan kuzatishi, xabarnomalar olishi va ta'lim jadvalini boshqarishi mumkin.",
+    "advantagestitle1": "Moslashuvchan kirish tizimi",
+    "advantagestext1": "Foydalanuvchilar kurslarga ariza berishlari mumkin, administratorlar esa kirishni tezda boshqarishlari mumkin, bu ariza holati va vaqtga qarab berish yoki cheklashni amalga oshiradi.",
+    "advantagestitle2": "Moslashuvchanlik va mavjudlik",
+    "advantagestext2": "Veb-sayt turli qurilmalarga moslashtirilgan, bu ta'limni har qanday joyda va har qanday vaqtda olish imkonini beradi, ta'lim jarayonini maksimal darajada moslashuvchan va mavjud qiladi."
 }

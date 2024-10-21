@@ -33,5 +33,12 @@
     "go": "Go",
     "about-us_title": "About Us",
     "about-us_text": "At the initiative of the Head of State, Shavkat Mirziyoyev, the justice bodies have been transformed into a more people-oriented structure responsible for addressing legal issues of citizens directly on the ground, in the mahallas (neighborhoods). First, the justice bodies will take practical measures to identify and analyze legal problems that arise in the daily lives of the population, as well as develop legislative projects aimed at resolving them.",
-    "advantages": "Advantages"
+    "advantages": "Advantages",
+    "advantagestitle": "Convenient Learning Management",
+    "advantagestext": "The site provides a personal cabinet where users can easily track their progress in courses, receive notifications, and manage their learning schedule.",
+    "advantagestitle1": "Flexible Access System",
+    "advantagestext1": "Users can apply for courses, and administrators can quickly manage access, granting or restricting it based on the application status and time.",
+    "advantagestitle2": "Adaptability and Accessibility",
+    "advantagestext2": "The site is adapted for various devices, allowing learning anywhere and anytime, making the learning process as flexible and accessible as possible."
+    
 }

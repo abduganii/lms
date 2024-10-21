@@ -37,8 +37,8 @@ export default function HomePage({graduated,partners,courses,posts,pages,article
     <NewsSections posts={posts}/>
     <PagesSections pages={pages}/>
     {/* <EducationSections/> */}
-    <SubscribeSections/>
-    <ReviewSections/>
+    {/* <SubscribeSections/>
+    <ReviewSections/> */}
     <ContactSections/>
     {/* <BlogsSections/> */}
   </div>

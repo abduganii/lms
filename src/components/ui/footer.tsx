@@ -34,10 +34,24 @@ export default function Footer() {
                 ))
             }
             <div className='w-full flex items-center gap-4'>
-            <TelegramIcons color={`#5B6871`} iconsColor={'#5B6871'}/>
-            <InstagramIcons color={'#5B6871'} iconsColor={'#5B6871'}/>
-            <FacebookIcons color={'#5B6871'} iconsColor={'#5B6871'}/>
-            <YouTobeIcons color={'#5B6871'} iconsColor={'#5B6871'}/>
+              <a target="_blank" href='https://t.me/huquqiyaxborot'>
+                <TelegramIcons color={`#5B6871`} iconsColor={'#5B6871'}/>
+              </a>
+              <a target="_blank" href='https://t.me/antikorbot'>
+                <TelegramIcons color={`#5B6871`} iconsColor={'#5B6871'}/>
+              </a>
+              <a target="_blank" href='https://www.facebook.com/minjustuz'>
+                <InstagramIcons color={`#5B6871`} iconsColor={'#5B6871'}/>
+              </a>
+              <a target="_blank" href='https://www.instagram.com/adliyanews/'>
+                <FacebookIcons color={`#5B6871`} iconsColor={'#5B6871'}/>
+              </a>
+              <a target="_blank" href='https://www.facebook.com/groups/588441011280149'>
+                <FacebookIcons color={`#5B6871`} iconsColor={'#5B6871'}/>
+              </a>
+              <a target="_blank" href='https://www.youtube.com/c/adliya'>
+                <YouTobeIcons color={`#5B6871`} iconsColor={'#5B6871'}/>
+              </a>
             </div>
         </div>
         <div className='flex items-center justify-between pt-5'>
