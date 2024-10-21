@@ -53,7 +53,7 @@ export default function AboutUsPage() {
                 <div className="w-full bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-6 rounded-md ">
                     <div className="w-[64px] h-[64px] bg-white"> </div>
                     <h4 className="mt-6 mb-1 text-[20px] font-semibold leading-[28px] ">{ t('advantagestitle1')}</h4>
-                    <p className="mb-4 text-[14px] font-normal leading-[24px] text-[#5B6871] list-decimal">{ t('advantagestext')}</p>
+                    <p className="mb-4 text-[14px] font-normal leading-[24px] text-[#5B6871] list-decimal">{ t('advantagestext1')}</p>
            
                 </div>
                 <div className="w-full bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-6 rounded-md ">
