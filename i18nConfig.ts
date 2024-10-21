@@ -1,6 +1,7 @@
+import { Config } from "next-i18n-router/dist/types";
 const i18nConfig = {
-  defaultLocale: "en",
   locales: ["en", "ru", "uz", "uz_cyr"],
+  defaultLocale: "en",
 };
 
 export default i18nConfig;

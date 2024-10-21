@@ -41,5 +41,9 @@
     "advantagestitle2": "Moslashuvchanlik va mavjudlik",
     "advantagestext2": "Veb-sayt turli qurilmalarga moslashtirilgan, bu ta'limni har qanday joyda va har qanday vaqtda olish imkonini beradi, ta'lim jarayonini maksimal darajada moslashuvchan va mavjud qiladi.",
     "start_date": "boshlanish sanasi",
-    "end_date": "tugash sanasi"
+    "end_date": "tugash sanasi",
+    "curstext1":"Kurslar soni",
+    "curstext2":"Ishtirokchilar soni",
+    "curstext3":"Umumiy vaqt"
 }
+

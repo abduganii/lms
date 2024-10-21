@@ -4,6 +4,7 @@ import { dir } from 'i18next'
 import Header from "@/components/ui/header";
 import TranslationsProvider from "@/components/TranslationsProvider";
 import { Inter } from "next/font/google";
+import { notFound } from 'next/navigation';
 import i18nConfig from "../../../i18nConfig";
 import initTranslations from "../i18n";
 import { ToastContainer } from 'react-toastify';
@@ -30,10 +31,13 @@ export default async function RootLayout({
   children: React.ReactNode;
   params:any
 }>) {
+  if (!i18nConfig.locales.includes(locale)) {
+    notFound();
+  }
 
   const { resources } = await initTranslations(locale, i18nNamespaces)
   return (
-    <html lang={locale} >
+    <html lang={locale} dir={dir(locale)}>
       <body className="bg-[#fff] dark:bg-[#00132D] dark:text-[#FFFFFF]">
       <head >
           <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"></meta>
@@ -62,3 +66,6 @@ export default async function RootLayout({
   </html>
   );
 }
+
+
+

@@ -27,21 +27,21 @@ export default function AboutUsPage() {
                     <StudyIcons/>
                     <div>
                         <h4 className="text-[20px] font-semibold leading-[28px] ">25+</h4>
-                        <p className=" text-[14px] font-normal leading-[24px] text-[#5B6871]">{ t('curs')}</p>
+                        <p className=" text-[14px] font-normal leading-[24px] text-[#5B6871]">{ t('curstext1')}</p>
                     </div>
                 </div>
                 <div className="w-full bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-6 rounded-md flex items-center gap-4">
                     <StudentIcons/>
                     <div>
                         <h4 className="text-[20px] font-semibold leading-[28px] ">25+</h4>
-                        <p className=" text-[14px] font-normal leading-[24px] text-[#5B6871]">{ t('curs')}</p>
+                        <p className=" text-[14px] font-normal leading-[24px] text-[#5B6871]">{ t('curstext2')}</p>
                     </div>
                 </div>
                 <div className="w-full bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-6 rounded-md flex items-center gap-4">
                     <ClouckIcons/>
                     <div>
                         <h4 className="text-[20px] font-semibold leading-[28px] ">25+</h4>
-                        <p className=" text-[14px] font-normal leading-[24px] text-[#5B6871]">{ t('curs')}</p>
+                        <p className=" text-[14px] font-normal leading-[24px] text-[#5B6871]">{ t('curstext3')}</p>
                     </div>
                 </div>
             </div>

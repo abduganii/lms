@@ -41,6 +41,8 @@
     "advantagestitle2": "Adaptability and Accessibility",
     "advantagestext2": "The site is adapted for various devices, allowing learning anywhere and anytime, making the learning process as flexible and accessible as possible.",
     "start_date": "start date",
-    "end_date": "end date"
-    
+    "end_date": "end date",
+    "curstext1":"Number of courses",
+    "curstext2":"Number of participants",
+    "curstext3":"Total time"
 }
