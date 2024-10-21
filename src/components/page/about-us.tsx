@@ -2,6 +2,9 @@
 "use client"
 import { useTranslation } from "react-i18next";
 import imag from "@/public/image.png"
+import imag1 from "@/public/1.jpg"
+import imag2 from "@/public/2.jpg"
+import imag3 from "@/public/3.jpg"
 import Image from "next/image"
 import Container from "../ui/container"
 import { ClouckIcons, StudentIcons, StudyIcons } from "../icon"
@@ -44,22 +47,23 @@ export default function AboutUsPage() {
             </div>
               <h3 className="text-4xl font-semibold leading-[38.73px] text-left mt-[64px] md:mt-[120px]">{ t('advantages')}</h3>
             <div className="flex flex-wrap md:flex-nowrap gap-6 mt-8 ">
-                <div className="w-full bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-6 rounded-md ">
-                    <div className="w-[64px] h-[64px] bg-white"> </div>
-                    <h4 className="mt-6 mb-1 text-[20px] font-semibold leading-[28px] ">{ t('advantagestitle')}</h4>
-                    <p className="mb-4 text-[14px] font-normal leading-[24px] text-[#5B6871] list-decimal">{ t('advantagestext')}</p>
+                <div className="w-full bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-6 rounded-md  text-center">
+                <Image src={imag1} width={200} height={200} alt="img" className="w-full  m-auto  max-w-[200px]  object-contain"/>
+                    <h4 className="mt-6 mb-1   text-start text-[20px] font-semibold leading-[28px] ">{ t('advantagestitle')}</h4>
+                    <p className="mb-4 text-[14px] font-normal   text-start leading-[24px] text-[#5B6871] list-decimal">{ t('advantagestext')}</p>
                     
                 </div>
-                <div className="w-full bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-6 rounded-md ">
-                    <div className="w-[64px] h-[64px] bg-white"> </div>
-                    <h4 className="mt-6 mb-1 text-[20px] font-semibold leading-[28px] ">{ t('advantagestitle1')}</h4>
-                    <p className="mb-4 text-[14px] font-normal leading-[24px] text-[#5B6871] list-decimal">{ t('advantagestext1')}</p>
+                <div className="w-full bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-6 rounded-md   text-center ">
+                     
+                    <Image src={imag2} width={200} height={200} alt="img" className="w-full  m-auto  max-w-[200px]  object-contain"/>
+                    <h4 className="mt-6 mb-1   text-start text-[20px] font-semibold leading-[28px] ">{ t('advantagestitle1')}</h4>
+                    <p className="mb-4 text-[14px] font-normal   text-start leading-[24px] text-[#5B6871] list-decimal">{ t('advantagestext1')}</p>
            
                 </div>
-                <div className="w-full bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-6 rounded-md ">
-                    <div className="w-[64px] h-[64px] bg-white"> </div>
-                    <h4 className="mt-6 mb-1 text-[20px] font-semibold leading-[28px] ">{ t('advantagestitle2')}</h4>
-                    <p className="mb-4 text-[14px] font-normal leading-[24px] text-[#5B6871] list-decimal">{ t('advantagestext2')}</p>
+                <div className="w-full bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-6 rounded-md  text-center">
+                <Image src={imag3} width={200} height={200} alt="img" className="w-full m-auto max-w-[200px]  object-contain"/>
+                    <h4 className="mt-6 mb-1   text-start text-[20px] font-semibold leading-[28px] ">{ t('advantagestitle2')}</h4>
+                    <p className="mb-4 text-[14px] font-normal   text-start leading-[24px] text-[#5B6871] list-decimal">{ t('advantagestext2')}</p>
                 </div>
             </div>
           </Container>
