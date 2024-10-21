@@ -18,7 +18,7 @@ export default function ResourcesById({articles}:any) {
             <p className="text-[14px] font-medium leading-[24px]"dangerouslySetInnerHTML={{__html:articles?.author[i18n.language]}}/>
           </div>
          </div>
-        <SocketIcons/>
+        {/* <SocketIcons/> */}
       </div>
      
       {articles?.type == "file" ? articles?.files?.map((e:any, i:any)=>(
