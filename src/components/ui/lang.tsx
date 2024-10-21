@@ -50,8 +50,7 @@ export default function Lang() {
 
     // redirect to the new locale path
     if (
-      currentLocale === i18nConfig.defaultLocale &&
-      !i18nConfig.prefixDefault
+      currentLocale === i18nConfig.defaultLocale 
     ) {
       router.push('/' + newLocale + currentPathname);
     } else {
