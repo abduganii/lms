@@ -49,16 +49,19 @@ export default function BlogsIdPage({blogs,vidoe}:any) {
       
       
     </Container>
-    <Container className="pb-[50px]">
+    {
+
+vidoe?.length ? <Container className="pb-[50px]">
       <SwiperWithScrollIcons slidesPerView={3} className="flex items-center gap-6 mt-8 ">
             {
-                vidoe?.length && vidoe?.map((e:any)=>(
+                 vidoe?.map((e:any)=>(
                     <NewsCard  videoLink={e?.link[i18n.language]} isVideo={true} disc={e?.name[i18n.language]} image={e?.image} key={e?.id}  
                       title={e?.title} date={e?.created_at}/>
                 ))
         }
         </SwiperWithScrollIcons>
-    </Container>
+    </Container>:""
+    }
     </div>
   );
 }
