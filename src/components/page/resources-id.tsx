@@ -7,7 +7,6 @@ import PdfViewer from '../ui/pdfViewer'
 
 export default function ResourcesById({articles}:any) {
   const { i18n } = useTranslation()
-  console.log(articles)
   return (
     <Container className='py-[120px] md:py-[160px]'>
         <div className="w-full cursor-pointer flex items-end  justify-between bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-10 rounded-lg mb-12">
@@ -28,7 +27,13 @@ export default function ResourcesById({articles}:any) {
             style={{ width: '100%', height: '100vh' }}
     />
       )):
-      <p className="text-[14px] font-medium leading-[24px]"dangerouslySetInnerHTML={{__html:articles?.content[i18n.language]}}/>
+      <p className="text-[#48535B]  text-base font-normal leading-[26px]"  dangerouslySetInnerHTML={{__html: articles?.content[i18n.language].replace(
+        /<oembed url="https:\/\/youtu\.be\/(.+?)".*><\/oembed>/g,
+        (match:any, videoId:any) => {
+          return `<iframe class="w-full aspect-video" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+        }
+      )
+      }} />
       }
     </Container>
   )
