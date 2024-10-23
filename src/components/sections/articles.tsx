@@ -18,7 +18,10 @@ export default function ArticlesSections({ articles }: any) {
                         articles?.length && articles.map((e:any)=>(
                             <Link href={`/resources/${e?.id}`} key={e?.id} className="group w-full inline-block bg-[#F1F1F1] dark:bg-[#001E45] rounded p-4">
                                 <h3 className="group-hover:text-[#13399A] pb-4 text-base font-semibold leading-6 text-left mb-2" dangerouslySetInnerHTML={{__html:e?.title}}/>
-                                <p className="text-sm font-normal leading-6 text-left">{dayjs(e?.created_at).format('YYYY.MM.DD')}</p>
+                                <div className="flex items-center gap-2">
+                                <p className="text-[14px] font-medium leading-[24px]"dangerouslySetInnerHTML={{__html:e?.author}}/>
+                                <p className="text-sm font-normal leading-6 text-left flex items-center gap-2" ><span className="bg-[#D5DADD] w-[6px] h-[6px] rounded-full"></span> {dayjs(e?.created_at).format('YYYY.MM.DD')}</p>
+                                </div>
                             </Link>
                         ))
                     }
