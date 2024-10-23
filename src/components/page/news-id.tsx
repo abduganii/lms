@@ -34,7 +34,7 @@ export default function NewsIdPage({ news }: any) {
             }
           )
           }} />
-        {news?.og_url &&<Link className='inline-block decoration-1 text-blue-400' href={news?.og_url}>{news?.og_url}</Link>}
+        {news?.og_url &&<a target="_blank" className='inline-block decoration-1 text-blue-400' href={news?.og_url}>{news?.og_url}</a>}
       </div>
 
 

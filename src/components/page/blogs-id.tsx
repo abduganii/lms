@@ -43,7 +43,7 @@ export default function BlogsIdPage({blogs,vidoe}:any) {
             }
           )
           }} />
-           {blogs?.og_url &&<Link className='inline-block decoration-1 text-blue-400' href={blogs?.og_url}>{blogs?.og_url}</Link>}
+           {blogs?.og_url && <a target="_blank" className='inline-block decoration-1 text-blue-400' href={blogs?.og_url}>{blogs?.og_url}</a>}
       </div>
 
       

@@ -14,17 +14,19 @@ export async function generateMetadata({ params: {id, locale } }: any): Promise<
   const ogDescription = res?.og_description || 'Default Description';
   const ogImage = res?.og_image || '/default-image.png';
   const ogUrl = res?.og_url || process.env.NEXT_PUBLIC_URL;
+  const keywords = res?.keywords || 'default, keywords';
 
   return {
     title: ogTitle,
     description: ogDescription,
+    keywords: keywords.split(',').map((keyword: string) => keyword.trim()),
     openGraph: {
       title: ogTitle,
       description: ogDescription,
       images: [
         {
           url: ogImage,
-          alt: ogTitle,
+          alt: ogUrl,
         }
       ],
       url: ogUrl,
