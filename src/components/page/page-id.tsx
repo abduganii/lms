@@ -15,6 +15,7 @@ export default function PagesIdPage({ news }: any) {
           alt="img"
           src={news?.image}
           width={760}
+          title={news?.image} 
           height={480}
         />
 

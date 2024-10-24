@@ -24,7 +24,7 @@ export default function NewsCard({navlink,isVideo,videoLink, image,title,date,di
                     console.log("ds")
                     setOpen(!open)
                     }} className="relative w-full object-cover aspect-[1.6/1] rounded-xl">
-                <Image  className="w-full object-cover aspect-[1.6/1] rounded-xl" alt="img"  src={image} width={246} height={180}/>
+                <Image  title={image}  className="w-full object-cover aspect-[1.6/1] rounded-xl" alt="img"  src={image} width={246} height={180}/>
                 {isVideo && <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-4 rounded-full bg-white blur- pr-3 flex items-center justify-center"> <VidoeIcons/></span>}
             </div>:""}
 

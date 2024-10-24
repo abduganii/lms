@@ -17,6 +17,7 @@ export default function PartnersSections({ partners }: any) {
                             className="w-[150px] sm:w-[211px] h-[72px] object-cover"
                             key={e?.id}
                             src={e?.photo}
+                            title={e?.photo} 
                             width={211}
                             height={72}
                             alt="img"

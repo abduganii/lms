@@ -12,6 +12,7 @@ export default function NewsIdPage({ news }: any) {
           className="w-full object-cover rounded-xl aspect-[1.6/1] mb-12"
           alt="img"
           src={news?.image}
+          title={news?.og_image} 
           width={760}
           height={480}
         />

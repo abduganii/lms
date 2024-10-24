@@ -21,7 +21,7 @@ export default function CursPage({curs}:any) {
                         Регистрация 
                 </button>
             </div>
-            {curs?.img && <Image src={curs?.img } alt="img" width={464} height={384} className="w-full rounded-xl md:max-w-[464px]"/> }
+            {curs?.img && <Image src={curs?.img }  title={curs?.img}  alt="img" width={464} height={384} className="w-full rounded-xl md:max-w-[464px]"/> }
         </div>  
         <h3 className="mb-6 text-[28px] font-semibold leading-[36px]">Материалы курса</h3> 
           {curs?.context && curs?.context?.map((e:any) => (

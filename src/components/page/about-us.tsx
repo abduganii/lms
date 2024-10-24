@@ -14,7 +14,7 @@ export default function AboutUsPage() {
   return (
     <div className='pt-[96px]'>
         <div className={`md:py-[60px] lg:py-[140px] md:px-[74px] relative  md:flex justify-end bg-contain bg-center aspect-[2.5/1]`} >
-            <Image src={imag} width={1440} height={560} alt="img" className="w-full aspect-[2.57/1] object-contain top-0 left-0  md:absolute"/>
+            <Image  src={imag}    width={1440} height={560} alt="img" className="w-full aspect-[2.57/1] object-contain top-0 left-0  md:absolute"/>
             <div className='w-full max-w-[340px] md:max-w-[478px] md:text-white mx-4 mt-[38px] md:mx-0 md:mt-0 z-10'>
                   <h3 className='text-[32px]  font-semibold leading-[38.73px]  mb-2'>{ t('about-us_title')}</h3>
                   <p className='text-[16px]  font-normal leading-[26px] '>{t('about-us_text')}

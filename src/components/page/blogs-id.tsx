@@ -19,6 +19,7 @@ export default function BlogsIdPage({blogs,vidoe}:any) {
        { blogs?.images && <Image
           className="w-full object-cover  rounded-xl aspect-[1.6/1] mb-12"
           alt="img"
+          title={blogs?.images[0]}
           src={blogs?.images?.[0]}
           width={760}
           height={480}
