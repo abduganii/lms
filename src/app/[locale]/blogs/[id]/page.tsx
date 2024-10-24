@@ -14,7 +14,7 @@ async function getBlogsVidoe({id,lang}:any) {
 export async function generateMetadata({ params: {id, locale } }: any): Promise<Metadata> {
   const res = await getBlogs({id:id,lang:locale})
 
-  const ogTitle = res?.og_title || 'Default Title';
+  const ogTitle = res?.og_title || 'Blogs Page';
   const ogDescription = res?.og_description || 'Default Description';
   const ogImage = res?.og_image || '/default-image.png';
   const ogUrl = res?.og_url || process.env.NEXT_PUBLIC_URL;
