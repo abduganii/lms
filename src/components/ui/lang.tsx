@@ -18,19 +18,7 @@ const langFlag:any = {
     en:en,
     uz_cyr:uz,
 }
-const redirectToLocale = (locale: any, pathname: string) => {
-    if (!pathname) {
-      return '/';
-    }
-  
-    const pathParts = pathname.split('/');
-  
-    pathParts[1] = locale;
-  
-    const url = pathParts.join('/');
-  
-    return url;
-  };
+
 export default function Lang() {
   const { i18n,t } = useTranslation();
   const currentLocale = i18n.language;

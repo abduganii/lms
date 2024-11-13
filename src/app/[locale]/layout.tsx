@@ -35,6 +35,8 @@ export default async function RootLayout({
     notFound();
   }
 
+
+
   const { resources } = await initTranslations(locale, i18nNamespaces)
   return (
     <html lang={locale} dir={dir(locale)}>
