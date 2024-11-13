@@ -89,6 +89,43 @@ input{
   background: #555;
 }
 
+.hoverArea__sG6A5{
+  display: none !important;
+}
+
+.header__T2BTv._light__OPbng .agentName__IJNC4.agentName__IJNC4{
+  color: black !important;
+}
+.chatCopyright__kNPii{
+  display: none !important;
+} 
+.__chat__oAz97{
+  display: none !important;
+}
+
+
+#jvLabelWrap{
+  display: none !important;
+}
+.pattern__dZA_I{
+  background-image: none;
+  background: #F1F1F1 !important;
+}
+
+.leaf__zqr9p {
+  display: none !important;
+}
+._bottom__strX9{
+  display: none !important;
+}
+
+.headerBox___DLHL{
+  background: #F1F1F1 !important;
+}
+
+.leaf__zqr9p_bottom__strX9{
+  display: none !important;
+}
 @media screen and (max-width:1220px) {
   .ContainerLeft{
     width:100%;

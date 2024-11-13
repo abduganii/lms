@@ -4,6 +4,8 @@ import { I18nextProvider } from 'react-i18next';
 import { ReactNode, useEffect } from 'react';
 import initTranslations from '@/app/i18n';
 import { Resource, createInstance } from 'i18next';
+import Script from 'next/script';
+import CustomModal from './ui/CustomModal';
 
 export default function TranslationsProvider({
   children,
@@ -19,16 +21,14 @@ export default function TranslationsProvider({
   const i18n = createInstance();
 
   initTranslations(locale, namespaces, i18n, resources);
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = '//code.jivo.ru/widget/AF5OqMmpcX'; // Replace with your widget ID
-    script.async = true;
-    document.body.appendChild(script);
 
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
+  return <I18nextProvider i18n={i18n}>
+    {children}
 
-  return <I18nextProvider i18n={i18n}>{children}</I18nextProvider>;
+    <CustomModal/>
+    <Script
+        src="//code.jivo.ru/widget/AF5OqMmpcX"
+        strategy="afterInteractive"
+      />
+    </I18nextProvider>;
 }
