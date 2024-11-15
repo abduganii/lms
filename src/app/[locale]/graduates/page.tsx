@@ -15,6 +15,6 @@ export default async function graduates({params:{locale}}:any) {
   const graduates = await getGraduates({lang:locale})
 
   return (
-    <><GraduatesPage graduates={graduates?.data} /></>
+    <><GraduatesPage graduates={graduates?.data || []} /></>
   )
 }

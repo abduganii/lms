@@ -38,7 +38,7 @@ export default function TrainingVideosPage({curs,category}:any) {
     replace(`${pathname}`);
   },[])
   useEffect(()=>{
-    setcursArr(curs?.data)
+    setcursArr(curs?.data || [])
   },[curs])
 
   return (

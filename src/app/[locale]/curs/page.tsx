@@ -19,6 +19,6 @@ export default async function Curs({ searchParams: {page,category },params:{loca
   const curs = await getCourses({ page: page,category: category,lang:locale })
   const categories = await getCoursesCategory({lang:locale})
   return (
-    <><TrainingVideosPage curs={curs} category={categories}/></>
+    <><TrainingVideosPage curs={curs} category={categories || []}/></>
   )
 }

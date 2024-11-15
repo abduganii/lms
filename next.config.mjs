@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains:["min-just-api.darkspace.uz"]
+        domains:["min-just-api.darkspace.uz",'lms.adliya.uz']
       },
 };
 

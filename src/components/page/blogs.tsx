@@ -29,7 +29,7 @@ interface BlogsPageProps {
 
 export default function BlogsPage({ blogs, categories }: BlogsPageProps) {
   const {t} = useTranslation()
-  const [blogsArr, setBlogs] = useState<any>(); 
+  const [blogsArr, setBlogs] = useState<any>([]); 
   const [categoryArr,setcategoryArr] = useState<any>([])
   const searchParams = useSearchParams();
   const { replace } = useRouter();
@@ -58,7 +58,7 @@ export default function BlogsPage({ blogs, categories }: BlogsPageProps) {
     replace(`${pathname}`);
   },[])
   useEffect(()=>{
-    setBlogs(blogs?.data)
+    setBlogs(blogs?.data||[])
   },[blogs])
   return (
     <Container className='py-[120px] md:py-[160px]'>

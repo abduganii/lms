@@ -19,6 +19,7 @@ export async function generateMetadata({ params: {id, locale } }: any): Promise<
   const ogImage = res?.og_image || '/default-image.png';
   const ogUrl = res?.og_url || process.env.NEXT_PUBLIC_URL;
   const keywords = res?.keywords || 'default, keywords';
+  
   return {
     title: ogTitle,
     description: ogDescription,

@@ -19,7 +19,7 @@ export default function PagesPage({news}:any) {
   };
 
   useEffect(()=>{
-    setNewsArr(news?.data)
+    setNewsArr(news?.data || [])
   },[news])
   return (
     <Container  className='py-[120px] md:py-[160px]' >

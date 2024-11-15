@@ -23,7 +23,7 @@ export default function ResourcesPage({articles}:any) {
   };
 
   useEffect(()=>{
-    setResourcesArr(articles?.data)
+    setResourcesArr(articles?.data||[])
   },[articles])
   return (
     <Container  className='py-[120px] md:py-[160px]' >

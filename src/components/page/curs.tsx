@@ -5,9 +5,10 @@ import Image from "next/image";
 import Container from "../ui/container";
 import img from "@/public/Frame270989841.png"
 import { BlockIcons, PlayIcons } from "../icon";
+import { fetchData } from "@/service/get";
 
 export default function CursPage({curs}:any) {
-  const {t} = useTranslation()
+  const {i18n} = useTranslation()
   
   return (
     <Container className='md:pt-[160px] pt-[120px] pb-[104px]'>
@@ -17,7 +18,13 @@ export default function CursPage({curs}:any) {
                 <p className="mt-5 mb-4 text-[#5B6871] text-[14px] font-normal leading-[24px]">{curs?.description}
                 </p>
                   <p className="text-sm font-normal mb-4 leading-6 text-left flex items-center text-[#5B6871]" >{ curs?.allocated_time}</p>
-                <button className="inline-block bg-[#13399A] rounded-xl px-[22px] py-[11px]  text-white text-base font-semibold leading-7 text-left">
+                <button 
+                  onClick={async ()=>{
+                    fetchData(`${process.env.NEXT_PUBLIC_URL}/auth/init`,i18n.language || 'en')
+                       .then(data=>  window.open(data.url, '_blank'))
+                       .catch(err => console.log(err))
+               }}
+                className="inline-block bg-[#13399A] rounded-xl px-[22px] py-[11px]  text-white text-base font-semibold leading-7 text-left">
                         Регистрация 
                 </button>
             </div>

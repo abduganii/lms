@@ -22,7 +22,7 @@ export default async function Blogs({ searchParams: {page,category },params:{loc
   
   return (
     <>
-      <BlogsPage blogs={blogs} categories={categories} />
+      <BlogsPage blogs={blogs} categories={categories || []} />
     </>
   )
 }

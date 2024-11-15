@@ -4,9 +4,10 @@ import Image from "next/image";
 import img1 from '@/public/content.png'
 import img2 from '@/public/iPhone.png'
 import img3 from '@/public/image8.png'
+import { fetchData } from "@/service/get";
 
 export default function HeroSections() {
-    const {t} = useTranslation()
+    const {t, i18n} = useTranslation()
     return (
             <div className='flex items-center flex-wrap md:flex-nowrap justify-between ContainerLeft'>
                 <div className="w-full md:max-w-[492px]">
@@ -14,8 +15,14 @@ export default function HeroSections() {
                     {t('header_logo')}
                         </h2>
                         <p className="mb-6 text-base font-normal leading-7 text-left"> {t('hero_text')}</p>
-                        <button className="inline-block bg-[#13399A] rounded-xl px-[22px] py-[11px]  text-white text-base font-semibold leading-7 text-left">
-                        {t('sign_in')} 
+                        <button 
+                        onClick={async ()=>{
+                             fetchData(`${process.env.NEXT_PUBLIC_URL}/auth/init`,i18n.language || 'en')
+                                .then(data=>  window.open(data.url, '_blank'))
+                                .catch(err => console.log(err))
+                        }}
+                         className="inline-block bg-[#13399A] rounded-xl px-[22px] py-[11px]  text-white text-base font-semibold leading-7 text-left">
+                            {t('sign_in')} 
                         </button>
                 </div>
                 <div className="relative">
