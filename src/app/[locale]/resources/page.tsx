@@ -14,6 +14,8 @@ export async function generateMetadata({ params: { locale } }: any): Promise<Met
 export default async function Resources({ searchParams: {page }, params:{locale}}:any) {
 
   const articles = await getArticles({page:page, lang: locale})
+
+  console.log(articles)
   return (
     <><ResourcesPage articles={articles}/></>
   )

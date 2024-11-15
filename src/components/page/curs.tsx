@@ -15,9 +15,9 @@ export default function CursPage({curs}:any) {
         <div className="w-full flex md:flex-nowrap flex-wrap items-center gap-10 bg-[#F5F5F5] p-10  mb-12 rounded-md dark:bg-[#001E45] dark:text-[#FFFFFF]">
             <div className='w-full md:max-w-[568px]'>
                   <h3 className=" text-[36px] font-semibold leading-[48px]">{ curs?.name}</h3>
-                <p className="mt-5 mb-4 text-[#5B6871] text-[14px] font-normal leading-[24px]">{curs?.description}
+                <p className="mt-5 mb-4 text-[#5B6871] dark:text-white text-[14px] font-normal leading-[24px]">{curs?.description}
                 </p>
-                  <p className="text-sm font-normal mb-4 leading-6 text-left flex items-center text-[#5B6871]" >{ curs?.allocated_time}</p>
+                  <p className="text-sm font-normal mb-4 leading-6 text-left flex items-center text-[#5B6871] dark:text-white" >{ curs?.allocated_time}</p>
                 <button 
                   onClick={async ()=>{
                     fetchData(`${process.env.NEXT_PUBLIC_URL}/auth/init`,i18n.language || 'en')
@@ -36,7 +36,7 @@ export default function CursPage({curs}:any) {
             <div key={e?.id} className="w-full flex items-center bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-6 rounded-md gap-4 mb-4">
                 <PlayIcons/>
                 <p className="text-[16px] font-medium leading-[26px] " dangerouslySetInnerHTML={{__html:e?.name}}/>
-                <p className="text-sm font-normal leading-6 text-left ml-auto flex items-center text-[#5B6871]" >
+                <p className="text-sm font-normal leading-6 text-left ml-auto flex items-center text-[#5B6871] dark:text-white" >
                 {e?.duration}
                 </p>
             </div>

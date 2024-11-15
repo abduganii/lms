@@ -42,8 +42,8 @@ export default function NewsCard({navlink,isVideo,videoLink, image,title,date,di
             }
 
         <div className="group-hover:text-[#13399A]  whitespace-nowrap truncate text-base font-semibold leading-6 text-left mt-3 mb-1" dangerouslySetInnerHTML={{__html: title}} />
-        {disc &&   <p className="text-sm font-normal leading-6 text-left  text-[#5B6871] line-clamp-3" dangerouslySetInnerHTML={{__html:disc}}/>}
-        <p className="text-sm font-normal leading-6 text-left flex items-center text-[#5B6871]" > {dayjs(date).format('YYYY.MM.DD')}</p>
+        {disc &&   <p className="text-sm font-normal leading-6 text-left  text-[#5B6871] dark:text-white line-clamp-3" dangerouslySetInnerHTML={{__html:disc}}/>}
+        <p className="text-sm font-normal leading-6 text-left flex items-center text-[#5B6871] dark:text-white" > {dayjs(date).format('YYYY.MM.DD')}</p>
     </div>
     );
   }

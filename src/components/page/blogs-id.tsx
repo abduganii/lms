@@ -25,7 +25,7 @@ export default function BlogsIdPage({blogs,vidoe}:any) {
           height={480}
         />}
 
-          <p className="text-sm font-normal leading-6 text-left flex items-center text-[#5B6871] mb-4">
+          <p className="text-sm font-normal leading-6 text-left flex items-center text-[#5B6871] dark:text-white mb-4">
           {dayjs(blogs?.created_at).format('YYYY.MM.DD')}
         </p>
         <h3 className="mb-3 text-2xl font-semibold leading-[29.05px]" dangerouslySetInnerHTML={{__html:blogs?.name}}/>

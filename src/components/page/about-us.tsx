@@ -27,21 +27,21 @@ export default function AboutUsPage() {
                     <StudyIcons/>
                     <div>
                         <h4 className="text-[20px] font-semibold leading-[28px] ">25+</h4>
-                        <p className=" text-[14px] font-normal leading-[24px] text-[#5B6871]">{ t('curstext1')}</p>
+                        <p className=" text-[14px] font-normal leading-[24px] text-[#5B6871] dark:text-white">{ t('curstext1')}</p>
                     </div>
                 </div>
                 <div className="w-full bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-6 rounded-md flex items-center gap-4">
                     <StudentIcons/>
                     <div>
                         <h4 className="text-[20px] font-semibold leading-[28px] ">25+</h4>
-                        <p className=" text-[14px] font-normal leading-[24px] text-[#5B6871]">{ t('curstext2')}</p>
+                        <p className=" text-[14px] font-normal leading-[24px] text-[#5B6871] dark:text-white">{ t('curstext2')}</p>
                     </div>
                 </div>
                 <div className="w-full bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-6 rounded-md flex items-center gap-4">
                     <ClouckIcons/>
                     <div>
                         <h4 className="text-[20px] font-semibold leading-[28px] ">25+</h4>
-                        <p className=" text-[14px] font-normal leading-[24px] text-[#5B6871]">{ t('curstext3')}</p>
+                        <p className=" text-[14px] font-normal leading-[24px] text-[#5B6871] dark:text-white">{ t('curstext3')}</p>
                     </div>
                 </div>
             </div>
@@ -50,20 +50,20 @@ export default function AboutUsPage() {
                 <div className="w-full bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-6 rounded-md  text-center">
                 <Image src={imag1} width={200} height={200} alt="img" className="w-full  m-auto  max-w-[200px]  object-contain"/>
                     <h4 className="mt-6 mb-1   text-start text-[20px] font-semibold leading-[28px] ">{ t('advantagestitle')}</h4>
-                    <p className="mb-4 text-[14px] font-normal   text-start leading-[24px] text-[#5B6871] list-decimal">{ t('advantagestext')}</p>
+                    <p className="mb-4 text-[14px] font-normal   text-start leading-[24px] text-[#5B6871] dark:text-white list-decimal">{ t('advantagestext')}</p>
                     
                 </div>
                 <div className="w-full bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-6 rounded-md   text-center ">
                      
                     <Image src={imag2} width={200} height={200} alt="img" className="w-full  m-auto  max-w-[200px]  object-contain"/>
                     <h4 className="mt-6 mb-1   text-start text-[20px] font-semibold leading-[28px] ">{ t('advantagestitle1')}</h4>
-                    <p className="mb-4 text-[14px] font-normal   text-start leading-[24px] text-[#5B6871] list-decimal">{ t('advantagestext1')}</p>
+                    <p className="mb-4 text-[14px] font-normal   text-start leading-[24px] text-[#5B6871] dark:text-white list-decimal">{ t('advantagestext1')}</p>
            
                 </div>
                 <div className="w-full bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-6 rounded-md  text-center">
                 <Image src={imag3} width={200} height={200} alt="img" className="w-full m-auto max-w-[200px]  object-contain"/>
                     <h4 className="mt-6 mb-1   text-start text-[20px] font-semibold leading-[28px] ">{ t('advantagestitle2')}</h4>
-                    <p className="mb-4 text-[14px] font-normal   text-start leading-[24px] text-[#5B6871] list-decimal">{ t('advantagestext2')}</p>
+                    <p className="mb-4 text-[14px] font-normal   text-start leading-[24px] text-[#5B6871] dark:text-white list-decimal">{ t('advantagestext2')}</p>
                 </div>
             </div>
           </Container>

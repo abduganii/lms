@@ -20,7 +20,7 @@ export default function ReviewSections() {
                         <Image className="rounded-full" src={person} width={48} height={48} alt="img"/>
                         <div className="w-full"> 
                             <h4 className="text-sm font-semibold leading-6 text-left">Усмонов Алишер</h4>
-                            <p className="text-[#5B6871] text-sm font-normal leading-6 text-lef">CEO and Co-Founder of BR Company</p>
+                            <p className="text-[#5B6871] dark:text-white text-sm font-normal leading-6 text-lef">CEO and Co-Founder of BR Company</p>
                         </div>
                     </div>
                 </div>
@@ -30,7 +30,7 @@ export default function ReviewSections() {
                         <Image className="rounded-full" src={person} width={48} height={48} alt="img"/>
                         <div className="w-full"> 
                             <h4 className="text-sm font-semibold leading-6 text-left">Усмонов Алишер</h4>
-                            <p className="text-[#5B6871] text-sm font-normal leading-6 text-lef">CEO and Co-Founder of BR Company</p>
+                            <p className="text-[#5B6871] dark:text-white text-sm font-normal leading-6 text-lef">CEO and Co-Founder of BR Company</p>
                         </div>
                     </div>
                 </div>
@@ -40,7 +40,7 @@ export default function ReviewSections() {
                         <Image className="rounded-full" src={person} width={48} height={48} alt="img"/>
                         <div className="w-full"> 
                             <h4 className="text-sm font-semibold leading-6 text-left">Усмонов Алишер</h4>
-                            <p className="text-[#5B6871] text-sm font-normal leading-6 text-lef">CEO and Co-Founder of BR Company</p>
+                            <p className="text-[#5B6871] dark:text-white text-sm font-normal leading-6 text-lef">CEO and Co-Founder of BR Company</p>
                         </div>
                     </div>
                 </div>
@@ -50,7 +50,7 @@ export default function ReviewSections() {
                         <Image className="rounded-full" src={person} width={48} height={48} alt="img"/>
                         <div className="w-full"> 
                             <h4 className="text-sm font-semibold leading-6 text-left">Усмонов Алишер</h4>
-                            <p className="text-[#5B6871] text-sm font-normal leading-6 text-lef">CEO and Co-Founder of BR Company</p>
+                            <p className="text-[#5B6871] dark:text-white text-sm font-normal leading-6 text-lef">CEO and Co-Founder of BR Company</p>
                         </div>
                     </div>
                 </div>
