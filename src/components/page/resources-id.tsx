@@ -27,7 +27,7 @@ export default function ResourcesById({articles}:any) {
           style={{ width: '100%', height: '100vh' }}
     />
       )):
-      <div className="text-[#48535B]  dark:text-white   leading-[26px]"  dangerouslySetInnerHTML={{__html: articles?.content[i18n.language].replace(
+      <div className="text-[#48535B]  dark:text-white   leading-[26px] reach"  dangerouslySetInnerHTML={{__html: articles?.content[i18n.language].replace(
         /<oembed url="https:\/\/youtu\.be\/(.+?)".*><\/oembed>/g,
         (match:any, videoId:any) => {
           return `<iframe class="w-full aspect-video" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;

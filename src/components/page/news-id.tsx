@@ -22,13 +22,13 @@ export default function NewsIdPage({ news }: any) {
         </p>
         <h3 className="mb-3 text-2xl font-semibold leading-[29.05px]" dangerouslySetInnerHTML={{__html:news?.title}}/>
 
-        <div className="text-[#48535B] dark:text-white  leading-[26px]" dangerouslySetInnerHTML={{__html:news?.description.replace(
+        <div className="text-[#48535B] dark:text-white  leading-[26px] reach" dangerouslySetInnerHTML={{__html:news?.description.replace(
             /<oembed url="https:\/\/youtu\.be\/(.+?)".*><\/oembed>/g,
             (match:any, videoId:any) => {
               return `<iframe class="w-full aspect-video" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
             }
           )}}/>
-           <div className="text-[#48535B] dark:text-white   leading-[26px]"  dangerouslySetInnerHTML={{__html: news?.content.replace(
+           <div className="text-[#48535B] dark:text-white   leading-[26px] reach"  dangerouslySetInnerHTML={{__html: news?.content.replace(
             /<oembed url="https:\/\/youtu\.be\/(.+?)".*><\/oembed>/g,
             (match:any, videoId:any) => {
               return `<iframe class="w-full aspect-video" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;

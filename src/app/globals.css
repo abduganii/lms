@@ -127,6 +127,45 @@ input{
 .leaf__zqr9p_bottom__strX9{
   display: none !important;
 }
+
+
+.reach h1 {
+  font-size: 2em;       /* 32px if base font size is 16px */
+  font-weight: bold;    /* Bold font */
+  margin: 0.67em 0;     /* Top and bottom margins */
+}
+
+.reach h2 {
+  font-size: 1.5em;     /* 24px if base font size is 16px */
+  font-weight: bold;
+  margin: 0.83em 0;
+}
+
+.reach h3 {
+  font-size: 1.17em;    /* ~18.72px if base font size is 16px */
+  font-weight: bold;
+  margin: 1em 0;
+}
+
+.reach h4 {
+  font-size: 1em;       /* 16px if base font size is 16px */
+  font-weight: bold;
+  margin: 1.33em 0;
+}
+
+.reach h5 {
+  font-size: 0.83em;    /* ~13.28px if base font size is 16px */
+  font-weight: bold;
+  margin: 1.67em 0;
+}
+
+.reach h6 {
+  font-size: 0.67em;    /* ~10.72px if base font size is 16px */
+  font-weight: bold;
+  margin: 2.33em 0;
+}
+
+
 @media screen and (max-width:1220px) {
   .ContainerLeft{
     width:100%;
