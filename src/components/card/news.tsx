@@ -3,12 +3,12 @@ import Link from "next/link";
 import dayjs from "dayjs";
 import { VidoeIcons } from "../icon";
 import { useEffect, useState } from "react";
+import noImage from '@/public/no-image.png'
 import { useRouter } from "next/navigation";
 export default function NewsCard({navlink,isVideo,videoLink, image,title,date,disc,className}:any) {
     const [open,setOpen] = useState(false)
     const [embedUrl,setEmbedUrl] = useState('')
     const router = useRouter()
-  console.log(disc)
     useEffect(()=>{
 
         if(videoLink){
@@ -21,15 +21,16 @@ export default function NewsCard({navlink,isVideo,videoLink, image,title,date,di
     return (
     <div onClick={()=> navlink ? router.push(navlink) :"" } className={` cursor-pointer group w-full ${className && className}`} >
         {image && !open ? <div onClick={()=>{
-                    console.log("ds")
                     setOpen(!open)
                     }} className="relative w-full object-cover aspect-[1.6/1] rounded-xl">
                 <Image  title={image}  className="w-full object-cover aspect-[1.6/1] rounded-xl" alt="img"  src={image} width={246} height={180}/>
                 {isVideo && <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-4 rounded-full bg-white blur- pr-3 flex items-center justify-center"> <VidoeIcons/></span>}
-            </div>:""}
+              </div> : <div className="relative w-full flex items-center justify-center object-cover aspect-[1.6/1] rounded-xl">
+                      <Image src={noImage} width={100} height={100} alt="image"/>
+              </div>}
 
             {
-              open &&    <iframe
+              open &&  <iframe
               width="100%"
               height="240"
               className="w-full object-cover aspect-[1.6/1] rounded-xl" 
