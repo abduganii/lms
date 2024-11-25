@@ -3,8 +3,6 @@
 import { useTranslation } from "react-i18next";
 import Image from "next/image";
 import Container from "../ui/container";
-import img from "@/public/Frame270989841.png"
-import { BlockIcons, PlayIcons } from "../icon";
 import { fetchData } from "@/service/get";
 
 export default function CursPage({curs}:any) {

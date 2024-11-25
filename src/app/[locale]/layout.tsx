@@ -43,7 +43,7 @@ export default async function RootLayout({
     <html lang={locale} dir={dir(locale)}>
       <body className="bg-[#fff] dark:bg-[#00132D] dark:text-[#FFFFFF]">
       <head >
-          <link rel="icon" href={'/public/favicon.ico'} sizes="any" />
+          {/* <link rel="icon" href={'/public/favicon.ico'} sizes="any" /> */}
           <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"></meta>
       </head>
     <NextTopLoader
