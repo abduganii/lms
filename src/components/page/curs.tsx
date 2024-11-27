@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import Image from "next/image";
 import Container from "../ui/container";
 import { fetchData } from "@/service/get";
+import { Unnom } from "../icon";
 
 export default function CursPage({curs}:any) {
   const {i18n} = useTranslation()
@@ -32,6 +33,7 @@ export default function CursPage({curs}:any) {
           {curs?.context && curs?.context?.map((e:any) => (
             
             <div key={e?.id} className="w-full flex items-center bg-[#F5F5F5] dark:bg-[#001E45] dark:text-[#FFFFFF] p-6 rounded-md gap-4 mb-4">
+              <Unnom/>
                 <p className="text-[16px] font-medium leading-[26px] " dangerouslySetInnerHTML={{__html:e?.name}}/>
                 <p className="text-sm font-normal leading-6 text-left ml-auto flex items-center text-[#5B6871] dark:text-white" >
                 {e?.duration}
